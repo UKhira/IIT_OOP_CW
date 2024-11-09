@@ -1,9 +1,6 @@
 package com.CW.TicketingSystem.CLI;
 
 import com.CW.TicketingSystem.System.Ticket;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.context.annotation.Bean;
 
 import java.util.Scanner;
 public class UserCLI {
@@ -23,7 +20,7 @@ public class UserCLI {
 
             switch (primaryOption) {
                 case 1:
-                    System.out.println(STR."There are \{viewTotalTickets()} tickets currently available in system");
+                    System.out.println("There are  tickets currently available in system");
                     break;
                 case 2: // Do something
                     break;
@@ -48,5 +45,6 @@ public class UserCLI {
     public static void setMaxTickets(){
         System.out.println("Enter the Max Ticket amount");
         int totalTicket = userInput.nextInt();
+        Ticket ticket = new Ticket();
     }
 }
