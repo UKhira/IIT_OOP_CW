@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Random;
@@ -6,8 +7,6 @@ import java.util.Random;
 public class CLI{
 
     private static Scanner userInput = new Scanner(System.in);
-    public static int maxTicketAmount;
-    public static int totalAvailableTickets = 0;
     private static boolean inputPassed = false;
     private static String[] optionArray = {"Welcome, Please select an option", "1. View Total Tickets", "2. Setup Ticket Release Rate", "3. Setup Customer Retrieval Rate", "4. Setup Max Ticket Capacity", "5. Exit and Start The System"};
 
@@ -72,22 +71,31 @@ public class CLI{
         }
     }
 
-    private static void startThreads(){
-//        int checker = 0;
-//        for (String option : optionArray) {
-//            if(option.contains("Done"))
-//                checker++;
-//        }
+    private static void startThreads() throws SQLException {
+        // Connect to Database
+        Database.connect();
+
+        // Generate Random Ticket Amounts
+        Random randomNumber = new Random();
+
+        // Check whether all the tasks is done in option menu
+        int checker = 0;
+        /*for (String option : optionArray) {
+            if(option.contains("Done"))
+                checker++;
+        }*/
 //        if(checker == 4){
+            inputPassed = true;
             TicketPool ticketPool = new TicketPool();
 
+            // Customer and Vendor Threads
             for(int i = TicketPool.getCurrentAmount(); i < TicketPool.maxCapacity; i++){
-                new Thread(new Vendor(ticketPool, 40)).start();
-                new Thread(new Customer(ticketPool, 30)).start();
+                new Thread(new Vendor(ticketPool, randomNumber.nextInt(10))).start();
+                new Thread(new Customer(ticketPool, randomNumber.nextInt(10))).start();
             }
-//        }
-//        else
-//            System.out.println("Please setup all parameters before start the system");
+        /*}
+        else
+            System.out.println("Please setup all parameters before start the system");*/
     }
 }
 

@@ -21,9 +21,4 @@ public class Database {
                     connection.close();
             }
     }
-
-//    public static void main(String[] args) throws SQLException {
-//        connect();
-//    }
-
 }

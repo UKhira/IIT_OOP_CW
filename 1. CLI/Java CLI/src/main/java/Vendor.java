@@ -10,7 +10,6 @@ public class Vendor implements Runnable{
 
     @Override
     public void run() {
-        System.out.println("Vendor Running");
         ticket.addTickets(this.ticketCount);
     }
 }

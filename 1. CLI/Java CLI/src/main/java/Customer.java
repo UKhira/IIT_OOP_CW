@@ -9,7 +9,6 @@ public class Customer implements Runnable{
 
     @Override
     public void run() {
-        System.out.println("Customer Running");
-        ticket.buyTickets(this.ticketCount);
+        ticket.removeTickets(this.ticketCount);
     }
 }
