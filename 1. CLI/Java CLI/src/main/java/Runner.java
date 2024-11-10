@@ -1,3 +1,5 @@
+package main.java;
+
 public class Runner implements Runnable{
     private int ticketCount = 0;
 

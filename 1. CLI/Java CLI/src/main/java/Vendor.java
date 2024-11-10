@@ -1,3 +1,5 @@
+package main.java;
+
 public class Vendor implements Runnable{
     private int vendorId;
     private int ticketCount;
