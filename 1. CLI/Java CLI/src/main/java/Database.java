@@ -8,8 +8,8 @@ import java.sql.SQLException;
 
 public class Database {
     private static final String URL = "jdbc:mysql://localhost:3306/ticketingInfo"; // database name at the end
-    private static final String USER = "SystemAdmin"; // {root, SystemAdmin}
-    private static final String PASSWORD = "admin123"; // {password123, admin123}
+    private static final String USER = "root"; // {root, SystemAdmin}
+    private static final String PASSWORD = "password123"; // {password123, admin123}
     public static void connect() throws SQLException {
         Connection connection = null;
             try {
@@ -17,8 +17,8 @@ public class Database {
                 System.out.println("Connected to the database successfully!");
             } catch (SQLException e) {
                 System.out.println("Connection failed!");
-            }
-            finally {
+                System.out.println(e.getMessage());
+            } finally {
                 if(connection != null)
                     connection.close();
             }

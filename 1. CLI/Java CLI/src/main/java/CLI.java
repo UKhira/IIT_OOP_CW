@@ -66,7 +66,7 @@ public class CLI{
         System.out.println("Enter the Max Ticket amount");
         if(userInput.hasNextInt()){
             TicketPool.setMaxCapacity(userInput.nextInt());
-            updateOptionMenu(2);
+            updateOptionMenu(4);
         }
         else{
             System.out.println("Please enter a Integer value");
@@ -91,7 +91,7 @@ public class CLI{
             TicketPool ticketPool = new TicketPool();
 
             // Customer and Vendor Threads
-            for(int i = TicketPool.getCurrentAmount(); i < TicketPool.maxCapacity; i++){
+            for(int i = TicketPool.getCurrentAmount(); i < TicketPool.getMaxCapacity(); i++){
                 new Thread(new Vendor(ticketPool, randomNumber.nextInt(10))).start();
                 new Thread(new Customer(ticketPool, randomNumber.nextInt(10))).start();
             }

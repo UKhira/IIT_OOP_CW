@@ -8,12 +8,16 @@ public class TicketPool {
     private int id;
     private double price;
     private static int currentAmount;
-    public static int maxCapacity;
+    private static int maxCapacity;
     final static List<Integer> list=new ArrayList<Integer>();
     public static List<Integer> synList=Collections.synchronizedList(list);
 
     public static void setMaxCapacity(int amount){
         maxCapacity = amount;
+    }
+
+    public static int getMaxCapacity(){
+        return maxCapacity;
     }
 
     public static synchronized int getCurrentAmount(){
