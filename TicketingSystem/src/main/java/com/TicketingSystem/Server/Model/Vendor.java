@@ -1,4 +1,4 @@
-package main.java;
+package com.TicketingSystem.Server.Model;
 
 public class Vendor implements Runnable{
     private int vendorId;
@@ -19,10 +19,7 @@ public class Vendor implements Runnable{
 
     @Override
     public void run() {
-        try {
-            ticket.addTickets(this.ticketCount);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        System.out.println(Thread.currentThread().getName());
+        ticket.addTickets(this.ticketCount);
     }
 }

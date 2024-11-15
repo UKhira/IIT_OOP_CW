@@ -1,4 +1,4 @@
-package com.CW.TicketingSystem.CLI;
+package com.CW.CLI;
 
 
 public class Ticket {

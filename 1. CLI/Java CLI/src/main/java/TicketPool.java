@@ -9,8 +9,8 @@ public class TicketPool {
     private double price;
     private static int currentAmount;
     private static int maxCapacity;
-    final static List<Integer> list=new ArrayList<Integer>();
-    public static List<Integer> synList=Collections.synchronizedList(list);
+    private static List<Integer> custList = Collections.synchronizedList(new ArrayList<>());
+    private static List<Integer> vendList = Collections.synchronizedList(new ArrayList<>());
 
     public static void setMaxCapacity(int amount){
         maxCapacity = amount;
@@ -24,23 +24,36 @@ public class TicketPool {
         return currentAmount;
     }
 
-    public synchronized void addTickets(int amount){
+    public synchronized void addTickets(int amount) throws InterruptedException {
         if(currentAmount + amount <= maxCapacity) {
+            notify();
             currentAmount += amount;
-            synList.add(amount);
-            System.out.println("Vendor added " + amount + " to the Ticket Pool\nTickets in Pool " + currentAmount);
+            vendList.add(amount);
+//            System.out.println("Vendor added " + amount + " to the Ticket Pool\nTickets in Pool " + currentAmount);
         }
-        else
-            System.out.println("You can only add another " + (maxCapacity - currentAmount) + " tickets or less than that");
+        else {
+            wait(1000);
+            vendList.add(404);
+        }
+//            System.out.println("You can only add another " + (maxCapacity - currentAmount) + " tickets or less than that");
     }
 
-    public synchronized void removeTickets(int amount){
+    public synchronized void removeTickets(int amount) throws InterruptedException {
         if(currentAmount - amount >= 0) {
+            notify();
             currentAmount -= amount;
-            synList.add(amount);
-            System.out.println("Customer bought " + amount + " from the Ticket Pool \nTickets in Pool: " + currentAmount);
+            custList.add(amount);
+//            System.out.println("Customer bought " + amount + " from the Ticket Pool \nTickets in Pool: " + currentAmount);
         }
-        else
-            System.out.println("You can buy only " + currentAmount + " or less than that");
+        else{
+            wait(1000);
+            custList.add(404);
+        }
+//            System.out.println("You can buy only " + currentAmount + " or less than that");
+    }
+
+    public static void showList(){
+        System.out.println(custList);
+        System.out.println(vendList);
     }
 }

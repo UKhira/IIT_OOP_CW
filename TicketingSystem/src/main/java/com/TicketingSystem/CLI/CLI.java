@@ -1,15 +1,15 @@
-package main.java;
+package com.TicketingSystem.CLI;
 
-import java.io.IOException;
-import java.sql.SQLException;
-import java.util.Random;
+import com.TicketingSystem.Server.Model.*;
+import org.springframework.stereotype.Component;
 import java.util.Scanner;
 
+@Component
 public class CLI{
 
-    private static Scanner userInput = new Scanner(System.in);
+    private static final Scanner userInput = new Scanner(System.in);
     private static boolean inputPassed = false;
-    private static String[] optionArray = {
+    private static final String[] optionArray = {
             "*  Welcome, Please select an option       *",
             "*  1. View Total Tickets                  *",
             "*  2. Setup Ticket Release Rate           *",
@@ -20,7 +20,8 @@ public class CLI{
 
 
     // ** Initiate User Terminal Options ** //
-    public static void main(String[] args) throws IOException {
+    public void openCLI() {
+        System.out.println("I came here");
         while (!inputPassed) {
             try {
                 showOptions();
@@ -39,7 +40,7 @@ public class CLI{
                         setMaxTickets();
                         break;
                     case 5:
-                        startThreads();
+                        inputPassed = ThreadGenerator.startThreads(optionArray, ticketRelease, customerRetrieval);
                         break;
                     default:
                         System.out.println("Invalid Input");
@@ -49,9 +50,6 @@ public class CLI{
                 System.out.println("Please enter the Option Number");
                 userInput.nextLine();           //If an invalid value contain in scanner it needed to be clear
             }
-           /* finally {
-                config.writeFile();
-            }*/
         }
     }
 
@@ -99,52 +97,10 @@ public class CLI{
         System.out.println("Enter the Highest Limit Ticket Amount which a Customer can buy");
         if(userInput.hasNextInt()) {
             updateOptionMenu(3);
-             customerRetrieval = userInput.nextInt();
+            customerRetrieval = userInput.nextInt();
         }
         else
             System.out.println("Invalid input");
-    }
-
-    private static void startThreads() throws SQLException {
-
-        // Check whether all the tasks is done in option menu
-        int checker = 0;
-        for (String option : optionArray) {
-            if(option.contains("Done"))
-                checker++;
-        }
-        if(checker == 4){
-            // Stop the Option Menu
-            inputPassed = true;
-
-            // Connect to Database
-            Database.connect();
-
-            // Generate Random Ticket Amounts
-            Random randomNumber = new Random();
-            TicketPool ticketPool = new TicketPool();
-
-            // Customer and Vendor Threads
-            System.out.println("System is running. Enter something to stop running");
-//            Thread vendorThread = new Thread(new Vendor(ticketPool, randomNumber.nextInt(1, ticketRelease)));
-//            Thread customerThread = new Thread(new Customer(ticketPool, randomNumber.nextInt(1, customerRetrieval)));
-
-            do {
-                for (int i = 0; i < 5; i++) {
-                    new Thread(new Vendor(ticketPool, randomNumber.nextInt(1, ticketRelease))).start();
-                    new Thread(new Customer(ticketPool, randomNumber.nextInt(1, customerRetrieval))).start();
-                }
-            }
-            while (!userInput.hasNext());
-            TicketPool.showList();
-
-//            for(int i = TicketPool.getCurrentAmount(); i < TicketPool.getMaxCapacity(); i++){
-//                new Thread(new Vendor(ticketPool, randomNumber.nextInt(1,ticketRelease))).start();
-//                new Thread(new Customer(ticketPool, randomNumber.nextInt(1,customerRetrieval))).start();
-//            }
-        }
-        else
-            System.out.println("Please setup all parameters before start the system");
     }
 }
 

@@ -1,6 +1,6 @@
-package com.CW.TicketingSystem.CLI;
+package com.CW.CLI;
 
-import com.CW.TicketingSystem.System.Ticket;
+import com.CW.CLI.Ticket;
 
 import java.util.Scanner;
 public class UserCLI {
@@ -38,10 +38,10 @@ public class UserCLI {
         }
     }
 
-    public static int viewTotalTickets(){
-        Ticket ticket = new Ticket();
-        return ticket.getTicketAmount();
-    }
+//    public static int viewTotalTickets(){
+//        Ticket ticket = new Ticket();
+//        return ticket.getTicketAmount();
+//    }
     public static void setMaxTickets(){
         System.out.println("Enter the Max Ticket amount");
         int totalTicket = userInput.nextInt();

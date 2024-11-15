@@ -1,4 +1,4 @@
-package main.java;
+package com.TicketingSystem.Server.Model;
 
 public class Customer implements Runnable{
     private int ticketCount;
@@ -20,10 +20,6 @@ public class Customer implements Runnable{
 
     @Override
     public void run() {
-        try {
-            ticket.removeTickets(this.ticketCount);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        ticket.removeTickets(this.ticketCount);
     }
 }
