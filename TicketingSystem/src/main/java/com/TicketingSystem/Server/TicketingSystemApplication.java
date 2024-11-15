@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Scanner;
 
 @SpringBootApplication
+
 public class TicketingSystemApplication {
 
 	public static void main(String[] args) {
@@ -31,7 +32,6 @@ public class TicketingSystemApplication {
 		else
 			System.out.println("Invalid Input. Please enter a number.");
 	}
-
 	private static void runCLI() {
 		System.out.println("Opening CLI...");
 		CLI terminal = new CLI();

@@ -11,12 +11,6 @@ public class ThreadGenerator {
 
     public ThreadGenerator() {}
 
-    @Autowired
-    Vendor vThread;
-
-    @Autowired
-    Customer cThread;
-
     public boolean startThreads(String[] optionArray, int ticketRelease, int customerRetrieval){
         boolean inputPassed = false;
         Scanner userInput = new Scanner(System.in);
@@ -28,18 +22,15 @@ public class ThreadGenerator {
                 checker++;
         }
         if (checker == 4) {
-            // Stop the Option Menu
+
+            // Stop the showOptionMenu() Loop
             inputPassed = true;
 
-            // Connect to Database
-//            Database.connect();
 
-            // Generate Random Ticket Amounts
+            // Generate Random Ticket Amounts within parameters
             Random randomNumber = new Random();
-            TicketPool ticketPool = new TicketPool();
 
-            // Customer and Vendor Threads
-            System.out.println("System is running. Enter something to stop running");
+            TicketPool ticketPool = new TicketPool();
 
             // Reference - https://stackoverflow.com/questions/45039819/java-how-to-wait-until-thread-exits-or-user-presses-enter
             Thread inputThread = new Thread(() -> {
@@ -55,9 +46,6 @@ public class ThreadGenerator {
                 new Thread(new Vendor(ticketPool, randomNumber.nextInt(1, ticketRelease))).start();
                 new Thread(new Customer(ticketPool, randomNumber.nextInt(1, customerRetrieval))).start();
 
-//                userInput.nextLine();
-//                vThread.stopThread();
-//                cThread.stopThread();
 
 //  Reference : https://stackoverflow.com/questions/4906799/why-invoke-thread-currentthread-interrupt-in-a-catch-interruptexception-block
                 try {
