@@ -1,6 +1,7 @@
 package com.TicketingSystem.CLI;
 
 import com.TicketingSystem.Server.Model.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import java.util.Scanner;
 
@@ -18,10 +19,8 @@ public class CLI{
             "*  5. Exit and Start The System           *"};
     private static int customerRetrieval,ticketRelease;
 
-
     // ** Initiate User Terminal Options ** //
     public void openCLI() {
-        System.out.println("I came here");
         while (!inputPassed) {
             try {
                 showOptions();
@@ -40,7 +39,8 @@ public class CLI{
                         setMaxTickets();
                         break;
                     case 5:
-                        inputPassed = ThreadGenerator.startThreads(optionArray, ticketRelease, customerRetrieval);
+                        ThreadGenerator threadGenerator = new ThreadGenerator();
+                        inputPassed = threadGenerator.startThreads(optionArray, ticketRelease, customerRetrieval);
                         break;
                     default:
                         System.out.println("Invalid Input");
