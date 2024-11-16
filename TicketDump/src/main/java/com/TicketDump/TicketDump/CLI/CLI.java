@@ -1,6 +1,6 @@
-package com.TicketingSystem.CLI;
+package com.TicketDump.TicketDump.CLI;
 
-import com.TicketingSystem.Server.Model.*;
+import com.TicketDump.TicketDump.Server.Model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import java.util.Scanner;
@@ -20,7 +20,7 @@ public class CLI{
     private static int customerRetrieval,ticketRelease;
 
     /**
-    * This is the Pilot Method of CLI. This method will control the user interaction with CLI Menu. While getting and providing necessary values from/to other classes
+     * This is the Pilot Method of CLI. This method will control the user interaction with CLI Menu. While getting and providing necessary values from/to other classes
      * @see <a href="https://www.baeldung.com/javadoc">JavaDoc Reference</a>
      * @since 1.0
      **/
@@ -32,7 +32,7 @@ public class CLI{
 
                 switch (primaryOption) {
                     case 1:
-                        System.out.println("There are " + TicketPool.getCurrentAmount() + " tickets currently available in system");
+                        System.out.println("There are " + Ticketpool.getCurrentAmount() + " tickets currently available in system");
                         updateOptionMenu(1);
                         break;
                     case 2: setTicketReleaseRate();
@@ -92,7 +92,7 @@ public class CLI{
     private static void setMaxTickets(){
         System.out.println("Enter the Max Ticket amount");
         if(userInput.hasNextInt()){
-            TicketPool.setMaxCapacity(userInput.nextInt());
+            Ticketpool.setMaxCapacity(userInput.nextInt());
             updateOptionMenu(4);
         }
         else{
@@ -128,4 +128,5 @@ public class CLI{
             System.out.println("Invalid input");
     }
 }
+
 

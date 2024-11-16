@@ -1,5 +1,6 @@
-package com.TicketingSystem.Server.Model;
+package com.TicketDump.TicketDump.Server.Model;
 
+import com.TicketDump.TicketDump.Server.Repository.ThreadActivityDAO;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -9,7 +10,6 @@ import java.util.Scanner;
 
 @Component
 public class ThreadGenerator {
-
     Scanner addCount = new Scanner(System.in);
 
     public boolean startThreads(String[] optionArray, int ticketRelease, int customerRetrieval){
@@ -30,26 +30,27 @@ public class ThreadGenerator {
 
             // Generate Random Ticket Amounts within parameters
             Random randomNumber = new Random();
-            TicketPool ticketPool = new TicketPool();
-            List <Thread> threadList = new ArrayList<>();
+            Ticketpool ticketPool = new Ticketpool();
+            List<Thread> threadList = new ArrayList<>();
 
             int vendorCount = setVendorCount();
             int customerCount = setCustomerCount();
 
             for(int i = 0; i < vendorCount; i++){
-                Thread vendor = new Thread(new Vendor(ticketPool, randomNumber.nextInt(1, ticketRelease)));
+                Thread vendor = new Thread(new Vendor(ticketPool, randomNumber.nextInt(1, ticketRelease),("Vendor " + i)));
                 System.out.println("Vendor " + i + "started");
+                vendor.setName("Vendor - " + i);
                 threadList.add(vendor);
                 vendor.start();
             }
 
             for(int i = 0; i < customerCount; i++){
-                Thread customer = new Thread(new Customer(ticketPool, randomNumber.nextInt(1, customerRetrieval)));
+                Thread customer = new Thread(new Customer(ticketPool, randomNumber.nextInt(1, customerRetrieval),("Customer " + i)));
+                customer.setName("Customer - " + i);
                 System.out.println("Customer " + i + "started");
                 threadList.add(customer);
                 customer.start();
             }
-            System.out.println(threadList);
 
             System.out.println("Simulation running. Press Enter to stop.");
             Scanner scanner = new Scanner(System.in);
@@ -66,21 +67,11 @@ public class ThreadGenerator {
             } catch (InterruptedException e) {
                 System.out.println("Error stopping threads.");
             }
-
-            System.out.println("Simulation stopped.");
-//            // Generate Vendor and Customer threads continuously
-//            while (true) {
-
-
-//  Reference : https://stackoverflow.com/questions/4906799/why-invoke-thread-currentthread-interrupt-in-a-catch-interruptexception-block
-//                try {
-//                    Thread.sleep(500);
-//                } catch (InterruptedException e) {
-//                    Thread.currentThread().interrupt(); // Restore interrupted status
-//                    System.out.println("Thread interrupted: " + e.getMessage());
-//                    break;
-//                }
-//            }
+            System.out.println("Simulation stopped.");int i = 0;
+            while(!Vendor.getVendNameList().isEmpty() && i < Vendor.getVendNameList().size()) {
+                ThreadActivityDAO.saveThreadActivity(Vendor.getVendNameList().get(i), "Vendor", Vendor.getVendTicketList().get(i));
+                i++;
+            }
         } else {
             System.out.println("Please setup all parameters before start the system");
         }
@@ -88,11 +79,11 @@ public class ThreadGenerator {
     }
 
     /*
-    * Purpose - To prevent user input errors with scanner in more efficient way
-    * Reference: https://stackoverflow.com/questions/26586489/integer-parseintscanner-nextline-vs-scanner-nextint*/
+     * Purpose - To prevent user input errors with scanner in more efficient way
+     * Reference: https://stackoverflow.com/questions/26586489/integer-parseintscanner-nextline-vs-scanner-nextint*/
     private int setVendorCount(){
         int count;
-        System.out.println("To Start Simulation Please Enter Vendor Count you want to add \nIf the value is invalid Customer count will be set as 5 to run the the simulation");
+        System.out.println("To Start Simulation Please Enter Vendor Count you want to add \nIf the value is invalid Vendor count will be set as 5 to run the the simulation");
         try{
             count = Integer.parseInt(addCount.nextLine());
         }
