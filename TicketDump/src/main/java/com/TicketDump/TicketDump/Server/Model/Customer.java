@@ -1,5 +1,6 @@
 package com.TicketDump.TicketDump.Server.Model;
 
+import com.TicketDump.TicketDump.Server.Repository.ThreadActivityDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -24,16 +25,11 @@ public class Customer implements Runnable{
 
 
 
-    public Customer(Ticketpool ticket, int amount, String name){
+    public Customer(Ticketpool ticket, int amount){
         this.ticket = ticket;
         this.ticketCount = amount;
-        this.name = name;
     }
 
-//    @Override
-//    public void run() {
-//        ticket.removeTickets(this.ticketCount);
-//    }
 
     @Override
     public void run() {
@@ -42,9 +38,10 @@ public class Customer implements Runnable{
             if(success){
                 custNameList.add(Thread.currentThread().getName());
                 custList.add(ticketCount);
+                System.out.println("Table Updatedy");
             }
-            System.out.println(custNameList);
-            System.out.println(custList);
+//            System.out.println(custNameList);
+//            System.out.println(custList);
             try {
                 Thread.sleep(500); // Optional delay
             } catch (InterruptedException e) {
@@ -57,13 +54,5 @@ public class Customer implements Runnable{
 
     public static void stopThread() {
         runFlag = false;
-    }
-
-    public static List<Integer> getCustList() {
-        return custList;
-    }
-
-    public static void setCustList(int ticketCount) {
-        custList.add(ticketCount);
     }
 }

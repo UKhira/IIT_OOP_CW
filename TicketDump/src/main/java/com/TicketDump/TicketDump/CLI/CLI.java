@@ -43,8 +43,7 @@ public class CLI{
                         setMaxTickets();
                         break;
                     case 5:
-                        ThreadGenerator threadGenerator = new ThreadGenerator();
-                        inputPassed = threadGenerator.startThreads(optionArray, ticketRelease, customerRetrieval);
+                        checkUpdate();
                         break;
                     default:
                         System.out.println("Invalid Input");
@@ -127,6 +126,26 @@ public class CLI{
         else
             System.out.println("Invalid input");
     }
-}
 
+    public void checkUpdate() {
+
+        // Check whether all the tasks is done in option menu
+        int checker = 0;
+        for (String option : optionArray) {
+            if (option.contains("Done"))
+                checker++;
+        }
+        if (checker == 4) {
+
+            // Stop the showOptionMenu() Loop
+            inputPassed = true;
+            ThreadGenerator threadGenerator = new ThreadGenerator();
+            threadGenerator.startThreads(ticketRelease,customerRetrieval);
+        }
+        else {
+            System.out.println("Please setup all parameters before start the system");
+        }
+
+    }
+}
 

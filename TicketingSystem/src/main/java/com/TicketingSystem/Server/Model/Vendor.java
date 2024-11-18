@@ -11,44 +11,36 @@ import java.util.List;
 
 //@Entity(name = "Vendor_Info")
 public class Vendor implements Runnable{
-
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "Vendor_Id")
-//    private int vendorId;
-
-//    @Column(name = "Added_Ticket_Count")
     private int ticketCount;
 
-//    @Transient
+    //    @Transient
     @Autowired
     private TicketPool ticket;
 
+    private String name;
 
-//    @Transient
-    private static List<Integer> vendList = Collections.synchronizedList(new ArrayList<>());
 
-//    @Transient
+    //    @Transient
+    private static List<Integer> vendTicketList = Collections.synchronizedList(new ArrayList<>());
+    private static List<String> vendNameList = Collections.synchronizedList(new ArrayList<>());
+
+
+    //    @Transient
     private static volatile boolean runflag = true;
 
-
-//    static Vendor vendor = new Vendor();
-
-//    public Vendor(){}
-
-//    private static Vendor getInstance(){
-//        return vendor;
-//    }
 
     public Vendor(TicketPool ticket, int amount){
         this.ticket = ticket;
         this.ticketCount = amount;
     }
 
-//    @Override
-//    public void run() {
-//        ticket.addTickets(this.ticketCount);
-//    }
+    public static List<String> getVendNameList(){
+        return vendNameList;
+    }
+
+    public static List<Integer> getVendTicketList(){
+        return vendTicketList;
+    }
 
     /**
      * Inherited method from runnable Interface. This method will do the thread running under runFlag() till user want to stop simulation
@@ -56,7 +48,14 @@ public class Vendor implements Runnable{
     @Override
     public void run() {
         while (runflag) {
-            ticket.addTickets(this.ticketCount); // Vendor adds tickets
+            boolean success = ticket.addTickets(this.ticketCount);
+            if(success){
+                vendNameList.add(Thread.currentThread().getName());
+                vendTicketList.add(ticketCount);
+            }
+//            System.out.println(vendNameList);
+//            System.out.println(vendList);
+
             try {
                 Thread.sleep(500); // Optional delay
             } catch (InterruptedException e) {
@@ -65,21 +64,13 @@ public class Vendor implements Runnable{
             }
         }
         System.out.println("Vendor thread stopped.");
-    }
 
+    }
 
 
     /**
      * will get change the value of flag to stop the loop of run() method so that it will stop the vendors adding ticket simulation*/
     public static void stopThread() {
         runflag = false;
-    }
-
-    public static List<Integer> getVendList() {
-        return vendList;
-    }
-
-    public static void setVendList(int ticketCount) {
-        vendList.add(ticketCount);
     }
 }

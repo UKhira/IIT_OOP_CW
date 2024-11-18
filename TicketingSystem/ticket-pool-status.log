@@ -1,0 +1,135 @@
+2024-11-18T21:44:24.254+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [restartedMain] c.T.Server.TicketingSystemApplication    : Starting TicketingSystemApplication using Java 23.0.1 with PID 9292 (C:\Users\admin\Documents\GitHub\IIT_OOP_CW\TicketingSystem\target\classes started by admin in C:\Users\admin\Documents\GitHub\IIT_OOP_CW\TicketingSystem)
+2024-11-18T21:44:24.259+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [restartedMain] c.T.Server.TicketingSystemApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-11-18T21:44:27.229+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-18T21:44:27.239+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-18T21:44:27.362+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-18T21:44:27.682+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-18T21:44:27.808+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-18T21:44:27.882+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-18T21:44:28.582+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-18T21:44:29.890+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5d0eef8e
+2024-11-18T21:44:29.892+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-18T21:44:30.059+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-18T21:44:30.858+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-18T21:44:31.157+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-18T21:44:31.941+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [restartedMain] c.T.Server.TicketingSystemApplication    : Started TicketingSystemApplication in 8.541 seconds (process running for 9.608)
+2024-11-18T21:44:47.518+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 added 3 tickets to the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:44:47.520+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 2
+2024-11-18T21:44:47.520+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 1
+2024-11-18T21:44:47.521+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : Vendor 3 added 3 tickets to the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:44:47.521+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 5
+2024-11-18T21:44:48.021+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:44:48.022+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:44:48.023+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 added 3 tickets to the Ticket Pool
+Tickets in Pool: 6
+2024-11-18T21:44:48.029+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 7
+2024-11-18T21:44:48.030+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : Vendor 3 added 3 tickets to the Ticket Pool
+Tickets in Pool: 10
+2024-11-18T21:44:48.523+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:44:48.525+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:44:48.531+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:48.532+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : Vendor 3 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:48.533+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:44:49.025+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:44:49.033+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:49.034+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : Vendor 3 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:49.034+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 7
+2024-11-18T21:44:49.036+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:44:49.534+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:49.535+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 7
+2024-11-18T21:44:49.536+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 6
+2024-11-18T21:44:49.536+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : Vendor 3 added 3 tickets to the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:44:49.550+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 10
+2024-11-18T21:44:50.036+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:44:50.036+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:50.051+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:44:50.052+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:44:50.053+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : Vendor 3 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:50.550+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:44:50.550+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:50.553+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:44:50.554+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:44:50.566+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : Vendor 3 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:51.054+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:44:51.063+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:44:51.064+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 7
+2024-11-18T21:44:51.065+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 added 3 tickets to the Ticket Pool
+Tickets in Pool: 10
+2024-11-18T21:44:51.079+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : Vendor 3 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:51.564+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 couldn't add 1 tickets. Pool is full.
+2024-11-18T21:44:51.565+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:44:51.580+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:44:51.581+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:51.581+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : Vendor 3 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:52.066+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:44:52.080+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:44:52.082+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 7
+2024-11-18T21:44:52.095+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 added 3 tickets to the Ticket Pool
+Tickets in Pool: 10
+2024-11-18T21:44:52.096+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : Vendor 3 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:52.581+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 couldn't add 1 tickets. Pool is full.
+2024-11-18T21:44:52.596+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:44:52.597+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:44:52.597+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:52.611+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : Vendor 3 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:53.093+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:44:53.098+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:44:53.108+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:53.108+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 7
+2024-11-18T21:44:53.124+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : Vendor 3 added 3 tickets to the Ticket Pool
+Tickets in Pool: 10
+2024-11-18T21:44:53.605+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:44:53.605+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 10
+2024-11-18T21:44:53.609+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:53.620+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:44:53.636+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : Vendor 3 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:54.120+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:44:54.120+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:44:54.121+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:44:54.135+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:44:54.150+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : Vendor 3 couldn't add 3 tickets. Pool is full.
+2024-11-18T21:45:55.607+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-18T21:45:56.282+05:30 %PARSER_ERROR[j] 9292 --- [TicketingSystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

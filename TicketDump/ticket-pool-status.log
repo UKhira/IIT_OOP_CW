@@ -1,0 +1,249 @@
+2024-11-18T21:13:40.978+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [restartedMain] c.T.TicketDump.Server.TicketDump         : Starting TicketDump using Java 23.0.1 with PID 9852 (C:\Users\admin\Documents\GitHub\IIT_OOP_CW\TicketDump\target\classes started by admin in C:\Users\admin\Documents\GitHub\IIT_OOP_CW\TicketDump)
+2024-11-18T21:13:40.978+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [restartedMain] c.T.TicketDump.Server.TicketDump         : No active profile set, falling back to 1 default profile: "default"
+2024-11-18T21:13:44.481+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-18T21:13:44.495+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-18T21:13:44.681+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-18T21:13:45.232+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-18T21:13:45.391+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-18T21:13:45.449+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-18T21:13:46.095+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-18T21:13:48.259+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1d03c3d3
+2024-11-18T21:13:48.260+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-18T21:13:48.521+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-18T21:13:50.321+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-18T21:13:50.975+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-18T21:13:53.060+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [restartedMain] c.T.TicketDump.Server.TicketDump         : Started TicketDump in 12.955 seconds (process running for 13.96)
+2024-11-18T21:14:47.286+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 added 2 tickets to the Ticket Pool
+Tickets in Pool: 2
+2024-11-18T21:14:47.287+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 1
+2024-11-18T21:14:47.287+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 0
+2024-11-18T21:14:47.288+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 couldn't buy 1 tickets. Not enough tickets in the pool.
+2024-11-18T21:14:47.288+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 1
+2024-11-18T21:14:47.289+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 added 2 tickets to the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:14:47.290+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 1 tickets to the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:14:47.790+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:14:47.790+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 added 2 tickets to the Ticket Pool
+Tickets in Pool: 5
+2024-11-18T21:14:47.790+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:14:47.791+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 5
+2024-11-18T21:14:47.791+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:14:47.791+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 added 2 tickets to the Ticket Pool
+Tickets in Pool: 6
+2024-11-18T21:14:47.791+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 1 tickets to the Ticket Pool
+Tickets in Pool: 7
+2024-11-18T21:14:48.298+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 1 tickets to the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:14:48.298+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 7
+2024-11-18T21:14:48.298+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:14:48.298+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 7
+2024-11-18T21:14:48.299+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 added 2 tickets to the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:14:48.299+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:14:48.299+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 added 2 tickets to the Ticket Pool
+Tickets in Pool: 10
+2024-11-18T21:14:48.800+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 couldn't add 1 tickets. Pool is full.
+2024-11-18T21:14:48.800+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:14:48.800+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 couldn't add 2 tickets. Pool is full.
+2024-11-18T21:14:48.801+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:14:48.801+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 7
+2024-11-18T21:14:48.802+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 1 tickets to the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:14:48.804+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 added 2 tickets to the Ticket Pool
+Tickets in Pool: 10
+2024-11-18T21:14:49.304+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:14:49.305+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 couldn't add 2 tickets. Pool is full.
+2024-11-18T21:14:49.305+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 10
+2024-11-18T21:14:49.307+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:14:49.307+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:14:49.307+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 1 tickets to the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:14:49.307+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 couldn't add 2 tickets. Pool is full.
+2024-11-18T21:14:49.807+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 couldn't add 2 tickets. Pool is full.
+2024-11-18T21:14:49.808+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 10
+2024-11-18T21:14:49.809+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:14:49.811+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-18T21:14:49.811+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 7
+2024-11-18T21:14:49.812+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 added 2 tickets to the Ticket Pool
+Tickets in Pool: 9
+2024-11-18T21:14:49.813+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 1 tickets to the Ticket Pool
+Tickets in Pool: 10
+2024-11-18T21:16:02.344+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-18T21:16:03.847+05:30 %PARSER_ERROR[j] 9852 --- [TicketDump] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-18T21:16:10.312+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [restartedMain] c.T.TicketDump.Server.TicketDump         : Starting TicketDump using Java 23.0.1 with PID 8820 (C:\Users\admin\Documents\GitHub\IIT_OOP_CW\TicketDump\target\classes started by admin in C:\Users\admin\Documents\GitHub\IIT_OOP_CW\TicketDump)
+2024-11-18T21:16:10.312+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [restartedMain] c.T.TicketDump.Server.TicketDump         : No active profile set, falling back to 1 default profile: "default"
+2024-11-18T21:16:13.326+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-18T21:16:13.326+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-18T21:16:13.420+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-18T21:16:13.718+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-18T21:16:13.827+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-18T21:16:13.905+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-18T21:16:14.484+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-18T21:16:15.734+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1fa8c89b
+2024-11-18T21:16:15.734+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-18T21:16:15.921+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-18T21:16:16.633+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-18T21:16:16.883+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-18T21:16:18.024+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [restartedMain] c.T.TicketDump.Server.TicketDump         : Started TicketDump in 8.546 seconds (process running for 9.521)
+2024-11-18T21:16:28.398+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 added 1 tickets to the Ticket Pool
+Tickets in Pool: 1
+2024-11-18T21:16:28.399+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 0
+2024-11-18T21:16:28.399+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 couldn't buy 1 tickets. Not enough tickets in the pool.
+2024-11-18T21:16:28.400+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 couldn't buy 1 tickets. Not enough tickets in the pool.
+2024-11-18T21:16:28.400+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 couldn't buy 1 tickets. Not enough tickets in the pool.
+2024-11-18T21:16:28.400+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 1
+2024-11-18T21:16:28.401+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 2 tickets to the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:28.901+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 2
+2024-11-18T21:16:28.902+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 1
+2024-11-18T21:16:28.902+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 added 1 tickets to the Ticket Pool
+Tickets in Pool: 2
+2024-11-18T21:16:28.903+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 1
+2024-11-18T21:16:28.903+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 2
+2024-11-18T21:16:28.903+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 1
+2024-11-18T21:16:28.903+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 2 tickets to the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:29.408+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 2
+2024-11-18T21:16:29.408+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 2 tickets to the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:29.408+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:29.408+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:29.409+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:29.409+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 added 1 tickets to the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:29.410+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:29.910+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 2
+2024-11-18T21:16:29.912+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 1
+2024-11-18T21:16:29.913+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 0
+2024-11-18T21:16:29.914+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 2 tickets to the Ticket Pool
+Tickets in Pool: 2
+2024-11-18T21:16:29.920+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 added 1 tickets to the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:29.921+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:29.923+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:30.423+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 2 tickets to the Ticket Pool
+Tickets in Pool: 5
+2024-11-18T21:16:30.424+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:30.424+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:30.425+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 2
+2024-11-18T21:16:30.426+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 added 1 tickets to the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:30.427+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:30.427+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:30.927+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 added 1 tickets to the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:30.928+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 2 tickets to the Ticket Pool
+Tickets in Pool: 6
+2024-11-18T21:16:30.928+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 5
+2024-11-18T21:16:30.929+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:30.931+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:30.933+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:30.934+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:31.434+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 2
+2024-11-18T21:16:31.435+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 2 tickets to the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:31.435+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 added 1 tickets to the Ticket Pool
+Tickets in Pool: 5
+2024-11-18T21:16:31.435+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:31.435+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:31.435+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:31.435+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:31.936+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 2
+2024-11-18T21:16:31.937+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 2 tickets to the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:31.938+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 added 1 tickets to the Ticket Pool
+Tickets in Pool: 5
+2024-11-18T21:16:31.939+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 6
+2024-11-18T21:16:31.939+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 5
+2024-11-18T21:16:31.940+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:31.941+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:32.442+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 2 tickets to the Ticket Pool
+Tickets in Pool: 5
+2024-11-18T21:16:32.443+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:32.444+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:32.444+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 added 1 tickets to the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:32.444+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:32.444+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 2
+2024-11-18T21:16:32.444+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:16:32.943+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 added 2 tickets to the Ticket Pool
+Tickets in Pool: 5
+2024-11-18T21:16:32.960+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 3] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 3 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:32.961+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 added 1 tickets to the Ticket Pool
+Tickets in Pool: 5
+2024-11-18T21:16:32.961+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 2] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 2 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:32.961+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 added 1 tickets to the Ticket Pool
+Tickets in Pool: 5
+2024-11-18T21:16:32.961+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 0] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 0 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 4
+2024-11-18T21:16:32.961+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [Vendor 1] c.T.TicketDump.Server.Model.Ticketpool   : Vendor 1 bought 1 tickets from the Ticket Pool
+Tickets in Pool: 3
+2024-11-18T21:38:11.792+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-18T21:38:11.803+05:30 %PARSER_ERROR[j] 8820 --- [TicketDump] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

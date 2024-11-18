@@ -1,22 +1,23 @@
 package com.TicketDump.TicketDump.Server.Model;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import org.apache.logging.log4j.LogManager;
+import org.springframework.stereotype.Component;
+import java.util.concurrent.atomic.AtomicInteger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
+@Component
+//@Entity
 public class Ticketpool {
-//    private static List<Integer> custList = Collections.synchronizedList(new ArrayList<>());
-//    private static List<Integer> vendList = Collections.synchronizedList(new ArrayList<>());
 
 //    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "id")
-//    Long id;
-
-    //    @Column(name = "Current")
+//    @Column
     private static int currentAmount;
 
+//    @Transient
     private static int maxCapacity;
+
+    protected static final Logger logger = LogManager.getLogger();
 
     public static void setMaxCapacity(int amount){
         maxCapacity = amount;
@@ -30,13 +31,18 @@ public class Ticketpool {
         return currentAmount;
     }
 
+    public static AtomicInteger convertAndReturnMAx(){
+        AtomicInteger count = new AtomicInteger(currentAmount);
+        return count;
+    }
+
     public synchronized boolean addTickets(int amount) {
         if (currentAmount + amount <= maxCapacity) {
             currentAmount += amount;
-            System.out.println(Thread.currentThread().getName() + " added " + amount + " tickets to the Ticket Pool\nTickets in Pool: " + getCurrentAmount());
+            logger.info("{} added {} tickets to the Ticket Pool\nTickets in Pool: {}", Thread.currentThread().getName(), amount, getCurrentAmount());
             return true; // Indicate success
         } else {
-            System.out.println("Vendor cannot add " + amount + " tickets. Pool is full.");
+            logger.info("{} couldn't add {} tickets. Pool is full.",Thread.currentThread().getName(), amount);
             return false; // Indicate failure
         }
     }
@@ -44,12 +50,11 @@ public class Ticketpool {
     public synchronized boolean removeTickets(int amount) {
         if (currentAmount - amount >= 0) {
             currentAmount -= amount;
-            System.out.println(Thread.currentThread().getName() + "bought " + amount + " tickets from the Ticket Pool\nTickets in Pool: " + getCurrentAmount());
+            logger.info("{} bought {} tickets from the Ticket Pool\nTickets in Pool: {}", Thread.currentThread().getName(), amount, getCurrentAmount());
             return true; // Indicate success
         } else {
-            System.out.println("Customer cannot buy " + amount + " tickets. Not enough tickets in the pool.");
+            logger.info("{} couldn't buy {} tickets. Not enough tickets in the pool.", Thread.currentThread().getName(),amount);
             return false; // Indicate failure
         }
     }
-
 }

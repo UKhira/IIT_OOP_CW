@@ -28,10 +28,9 @@ public class Vendor implements Runnable{
     private static volatile boolean runflag = true;
 
 
-    public Vendor(Ticketpool ticket, int amount, String name){
+    public Vendor(Ticketpool ticket, int amount){
         this.ticket = ticket;
         this.ticketCount = amount;
-        this.name = name;
     }
 
     public static List<String> getVendNameList(){
@@ -53,8 +52,8 @@ public class Vendor implements Runnable{
                 vendNameList.add(Thread.currentThread().getName());
                 vendList.add(ticketCount);
             }
-            System.out.println(vendNameList);
-            System.out.println(vendList);
+//            System.out.println(vendNameList);
+//            System.out.println(vendList);
 
             try {
                 Thread.sleep(500); // Optional delay
@@ -64,6 +63,7 @@ public class Vendor implements Runnable{
             }
         }
         System.out.println("Vendor thread stopped.");
+
     }
 
 
