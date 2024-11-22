@@ -1,8 +1,13 @@
 package com.TicketingSystem.CLI;
 
 import com.TicketingSystem.Server.Model.*;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.google.gson.Gson;
+import org.json.JSONObject;
 import org.springframework.stereotype.Component;
+
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 @Component
@@ -32,6 +37,7 @@ public class CLI{
 
                 switch (primaryOption) {
                     case 1:
+                        loadDataFromJson();
                         System.out.println("There are " + TicketPool.getCurrentAmount() + " tickets currently available in system");
                         updateOptionMenu(1);
                         break;
@@ -127,7 +133,7 @@ public class CLI{
             System.out.println("Invalid input");
     }
 
-    public void checkUpdate() {
+    public void checkUpdate() throws IOException {
 
         // Check whether all the tasks is done in option menu
         int checker = 0;
@@ -136,7 +142,6 @@ public class CLI{
                 checker++;
         }
         if (checker == 4) {
-
             // Stop the showOptionMenu() Loop
             inputPassed = true;
             ThreadGenerator threadGenerator = new ThreadGenerator();
@@ -145,7 +150,42 @@ public class CLI{
         else {
             System.out.println("Please setup all parameters before start the system");
         }
+    }
 
+
+    /**
+     * Write setup configuration to a JSON file
+     * @see <a href="https://mkyong.com/java/read-and-write-json-to-file-using-gson/">Gson</a>
+     * */
+    public static void saveConfiguration(int amount) {
+        SysConfig config = new SysConfig();
+        config.setCurrentAmount(amount);
+        config.setCustomerRetrievalRate(customerRetrieval);
+        config.setTicketReleaseRate(ticketRelease);
+        config.setMaxTicketCapacity(TicketPool.getMaxCapacity());
+        Gson json = new Gson();
+
+        try {
+            Writer writer = new FileWriter("Configuration.json");
+            json.toJson(config, writer);
+            writer.close();
+        }
+        catch (Exception e){
+            System.out.println("Failed to save configuration");
+        }
+    }
+
+    public void loadDataFromJson() {
+        try{
+            String jsonFile = new String(Files.readAllBytes(Paths.get("Configuration.json")));
+            JSONObject jsonObject = new JSONObject(jsonFile);
+
+            TicketPool.setCurrentAmount(jsonObject.getInt("currentAmount"));
+        }
+        catch (Exception e) {
+            System.out.println("No Data");
+            TicketPool.setCurrentAmount(0);
+        }
     }
 }
 

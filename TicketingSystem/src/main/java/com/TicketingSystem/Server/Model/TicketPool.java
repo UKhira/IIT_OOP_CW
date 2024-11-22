@@ -2,6 +2,7 @@ package com.TicketingSystem.Server.Model;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -18,6 +19,10 @@ public class TicketPool {
 
     public static int getMaxCapacity(){
         return maxCapacity;
+    }
+
+    public static synchronized void setCurrentAmount(int totalTickets){
+        currentAmount = totalTickets;
     }
 
     public static synchronized int getCurrentAmount(){

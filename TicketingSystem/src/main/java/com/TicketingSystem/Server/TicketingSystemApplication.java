@@ -20,13 +20,16 @@ public class TicketingSystemApplication {
 		System.out.println("Server has started");
 
 		Scanner scanner = new Scanner(System.in);
+
 		System.out.println("Do You want to open CLI (Y/N) ?");
 
 		String input = scanner.next();
-		if(input.equalsIgnoreCase("Y") || input.equalsIgnoreCase("Yes"))
+		if(input.equalsIgnoreCase("Y") || input.equalsIgnoreCase("Yes")) {
 			runCLI();
+		}
 		else
 			System.out.println("Continuing without opening CLI...");
+		scanner.close();
 	}
 
 	/**

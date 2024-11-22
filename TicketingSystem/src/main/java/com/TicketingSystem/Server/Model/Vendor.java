@@ -57,7 +57,7 @@ public class Vendor implements Runnable{
 //            System.out.println(vendList);
 
             try {
-                Thread.sleep(500); // Optional delay
+                Thread.sleep(1000); // Optional delay
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;

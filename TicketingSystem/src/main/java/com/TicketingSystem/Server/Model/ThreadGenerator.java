@@ -1,9 +1,11 @@
 package com.TicketingSystem.Server.Model;
 
+import com.TicketingSystem.CLI.CLI;
 import com.TicketingSystem.Server.Repository.StatusTable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -14,9 +16,10 @@ public class ThreadGenerator {
     @Autowired
     StatusTable table;
 
+
     Scanner addCount = new Scanner(System.in);
 
-    public void startThreads(int ticketRelease, int customerRetrieval) {
+    public void startThreads(int ticketRelease, int customerRetrieval) throws IOException {
 
         // Generate Random Ticket Amounts within parameters
         Random randomNumber = new Random();
@@ -59,12 +62,13 @@ public class ThreadGenerator {
             System.out.println("Error stopping threads.");
         }
 
+        CLI.saveConfiguration(TicketPool.getCurrentAmount());
         System.out.println("Simulation stopped.");
-        int i = 0;
-        while(i < Vendor.getVendTicketList().size()){
-            table.saveThreadActivity(Vendor.getVendNameList().get(i),"Vendor", Vendor.getVendTicketList().get(i));
-            i++;
-        }
+        //        int i = 0;
+//        while(i < Vendor.getVendTicketList().size()){
+//            table.saveThreadActivity(Vendor.getVendNameList().get(i),"Vendor", Vendor.getVendTicketList().get(i));
+//            i++;
+//        }
     }
 
 
@@ -97,4 +101,5 @@ public class ThreadGenerator {
         }
         return count;
     }
+
 }

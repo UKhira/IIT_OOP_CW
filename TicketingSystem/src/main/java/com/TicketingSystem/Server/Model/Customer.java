@@ -36,7 +36,7 @@ public class Customer implements Runnable{
                 custList.add(ticketCount);
             }
             try {
-                Thread.sleep(500); // Optional delay
+                Thread.sleep(1000); // Optional delay
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;
