@@ -11,7 +11,7 @@ import java.util.List;
 
 //@Entity(name = "Vendor_Info")
 public class Vendor implements Runnable{
-    private int ticketCount;
+    private final int ticketCount;
 
     //    @Transient
     @Autowired
@@ -21,8 +21,8 @@ public class Vendor implements Runnable{
 
 
     //    @Transient
-    private static List<Integer> vendTicketList = Collections.synchronizedList(new ArrayList<>());
-    private static List<String> vendNameList = Collections.synchronizedList(new ArrayList<>());
+    private static final List<Integer> vendTicketList = Collections.synchronizedList(new ArrayList<>());
+    private static final List<String> vendNameList = Collections.synchronizedList(new ArrayList<>());
 
 
     //    @Transient

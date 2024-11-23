@@ -5,7 +5,6 @@ import com.TicketingSystem.Server.Repository.StatusTable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -19,12 +18,14 @@ public class ThreadGenerator {
 
     Scanner addCount = new Scanner(System.in);
 
-    public void startThreads(int ticketRelease, int customerRetrieval) throws IOException {
+    public void startThreads(int ticketRelease, int customerRetrieval) {
 
         // Generate Random Ticket Amounts within parameters
         Random randomNumber = new Random();
         TicketPool ticketPool = new TicketPool();
         List<Thread> threadList = new ArrayList<>();
+
+        System.out.println("Once the simulation started. Press Enter to stop.\n");
 
         int vendorCount = setVendorCount();
         int customerCount = setCustomerCount();
@@ -39,14 +40,11 @@ public class ThreadGenerator {
 
         for (int i = 1; i <= customerCount; i++) {
             Thread customer = new Thread(new Customer(ticketPool, randomNumber.nextInt(1, customerRetrieval)));
-            customer.setName("Vendor " + i);
+            customer.setName("Customer " + i);
             System.out.println("Customer " + i + "started");
             threadList.add(customer);
             customer.start();
         }
-        System.out.println(threadList);
-
-        System.out.println("Simulation running. Press Enter to stop.");
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine(); // Wait for Enter key
 
