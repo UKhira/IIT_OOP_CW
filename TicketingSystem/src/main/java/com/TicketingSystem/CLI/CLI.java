@@ -133,7 +133,10 @@ public class CLI{
             System.out.println("Invalid input");
     }
 
-    public void checkUpdate() throws IOException {
+    /**
+     * This method will check whether user has been set all parameter values before starting simulation. If any value is missing then loop back the option Menu. If all are done then will be directed to simulation
+     * @since 1.4*/
+    public void checkUpdate() {
 
         // Check whether all the tasks is done in option menu
         int checker = 0;
@@ -156,7 +159,8 @@ public class CLI{
     /**
      * Write setup configuration to a JSON file
      * @see <a href="https://mkyong.com/java/read-and-write-json-to-file-using-gson/">Gson</a>
-     * */
+     * @since 1.8
+     */
     public static void saveConfiguration(int amount) {
         SysConfig config = new SysConfig();
         config.setCurrentAmount(amount);

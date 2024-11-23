@@ -27,6 +27,10 @@ public class Customer implements Runnable{
     }
 
 
+    /**
+     * This method will run the Customer simulation, where multiple customers attempt to buy tickets from ticket pool. ny RunFlag it will make sure that the simulation will tun until user forces threads to stop (By pressing Enter).
+     success variable will be checked whether the amount customer thread is going to buy is available in ticket pool. Only if so it will let the thread buy tickets
+     */
     @Override
     public void run() {
         while (runFlag) {
@@ -36,7 +40,7 @@ public class Customer implements Runnable{
                 custList.add(ticketCount);
             }
             try {
-                Thread.sleep(1000); // Optional delay
+                Thread.sleep(1000); // delay
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;

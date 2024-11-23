@@ -1344,3 +1344,330 @@ Tickets in Pool: 4
 2024-11-24T01:06:32.434+05:30 %PARSER_ERROR[j] 13452 --- [TicketingSystem] [Customer 4] c.T.Server.Model.TicketPool              : couldn't buy 7 tickets. Not enough tickets in the pool.
 2024-11-24T01:06:37.231+05:30 %PARSER_ERROR[j] 13452 --- [TicketingSystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-11-24T01:06:37.849+05:30 %PARSER_ERROR[j] 13452 --- [TicketingSystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-24T01:18:17.148+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [restartedMain] c.T.Server.TicketingSystemApplication    : Starting TicketingSystemApplication using Java 21.0.5 with PID 2300 (C:\Users\shanaka\Documents\GitHub\IIT_OOP_CW\TicketingSystem\target\classes started by shanaka in C:\Users\shanaka\Documents\GitHub\IIT_OOP_CW\TicketingSystem)
+2024-11-24T01:18:17.150+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [restartedMain] c.T.Server.TicketingSystemApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T01:18:18.451+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-24T01:18:18.451+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-24T01:18:18.503+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-24T01:18:18.658+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-24T01:18:18.714+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-24T01:18:18.746+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-24T01:18:19.069+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-24T01:18:20.445+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@b5a3390
+2024-11-24T01:18:20.447+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-24T01:18:20.643+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-24T01:18:21.636+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-24T01:18:22.346+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-24T01:18:22.727+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [restartedMain] c.T.Server.TicketingSystemApplication    : Started TicketingSystemApplication in 6.074 seconds (process running for 6.727)
+2024-11-24T01:18:59.809+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : added 17 tickets to the Ticket Pool
+Tickets in Pool: 21
+2024-11-24T01:18:59.810+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 4] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:18:59.811+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : added 4 tickets to the Ticket Pool
+Tickets in Pool: 25
+2024-11-24T01:18:59.811+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : added 2 tickets to the Ticket Pool
+Tickets in Pool: 27
+2024-11-24T01:18:59.811+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 5] c.T.Server.Model.TicketPool              : couldn't add 9 tickets. Pool is full.
+2024-11-24T01:18:59.812+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 6] c.T.Server.Model.TicketPool              : couldn't add 6 tickets. Pool is full.
+2024-11-24T01:18:59.813+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 7] c.T.Server.Model.TicketPool              : couldn't add 18 tickets. Pool is full.
+2024-11-24T01:18:59.815+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 8] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:18:59.816+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 9] c.T.Server.Model.TicketPool              : couldn't add 5 tickets. Pool is full.
+2024-11-24T01:18:59.817+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 10] c.T.Server.Model.TicketPool              : couldn't add 9 tickets. Pool is full.
+2024-11-24T01:18:59.818+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 11] c.T.Server.Model.TicketPool              : couldn't add 11 tickets. Pool is full.
+2024-11-24T01:18:59.819+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 12] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:18:59.820+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 13] c.T.Server.Model.TicketPool              : couldn't add 8 tickets. Pool is full.
+2024-11-24T01:18:59.821+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 14] c.T.Server.Model.TicketPool              : added 1 tickets to the Ticket Pool
+Tickets in Pool: 28
+2024-11-24T01:18:59.823+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 15] c.T.Server.Model.TicketPool              : added 1 tickets to the Ticket Pool
+Tickets in Pool: 29
+2024-11-24T01:18:59.824+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 16] c.T.Server.Model.TicketPool              : couldn't add 6 tickets. Pool is full.
+2024-11-24T01:18:59.825+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 1] c.T.Server.Model.TicketPool              : bought 2 tickets from the Ticket Pool
+Tickets in Pool: 27
+2024-11-24T01:18:59.827+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 2] c.T.Server.Model.TicketPool              : bought 10 tickets from the Ticket Pool
+Tickets in Pool: 17
+2024-11-24T01:18:59.828+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 3] c.T.Server.Model.TicketPool              : bought 3 tickets from the Ticket Pool
+Tickets in Pool: 14
+2024-11-24T01:18:59.829+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 4] c.T.Server.Model.TicketPool              : bought 5 tickets from the Ticket Pool
+Tickets in Pool: 9
+2024-11-24T01:18:59.830+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 5] c.T.Server.Model.TicketPool              : bought 2 tickets from the Ticket Pool
+Tickets in Pool: 7
+2024-11-24T01:18:59.832+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 6] c.T.Server.Model.TicketPool              : couldn't buy 18 tickets. Not enough tickets in the pool.
+2024-11-24T01:18:59.833+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 7] c.T.Server.Model.TicketPool              : bought 1 tickets from the Ticket Pool
+Tickets in Pool: 6
+2024-11-24T01:18:59.834+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 8] c.T.Server.Model.TicketPool              : bought 5 tickets from the Ticket Pool
+Tickets in Pool: 1
+2024-11-24T01:18:59.835+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 9] c.T.Server.Model.TicketPool              : couldn't buy 7 tickets. Not enough tickets in the pool.
+2024-11-24T01:18:59.837+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 10] c.T.Server.Model.TicketPool              : couldn't buy 4 tickets. Not enough tickets in the pool.
+2024-11-24T01:18:59.838+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 11] c.T.Server.Model.TicketPool              : couldn't buy 9 tickets. Not enough tickets in the pool.
+2024-11-24T01:18:59.839+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 12] c.T.Server.Model.TicketPool              : couldn't buy 7 tickets. Not enough tickets in the pool.
+2024-11-24T01:18:59.840+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 13] c.T.Server.Model.TicketPool              : couldn't buy 18 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:00.810+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : added 17 tickets to the Ticket Pool
+Tickets in Pool: 18
+2024-11-24T01:19:00.812+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : added 2 tickets to the Ticket Pool
+Tickets in Pool: 20
+2024-11-24T01:19:00.812+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : added 4 tickets to the Ticket Pool
+Tickets in Pool: 24
+2024-11-24T01:19:00.812+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 4] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:00.817+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 6] c.T.Server.Model.TicketPool              : added 6 tickets to the Ticket Pool
+Tickets in Pool: 30
+2024-11-24T01:19:00.817+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 9] c.T.Server.Model.TicketPool              : couldn't add 5 tickets. Pool is full.
+2024-11-24T01:19:00.817+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 5] c.T.Server.Model.TicketPool              : couldn't add 9 tickets. Pool is full.
+2024-11-24T01:19:00.817+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 7] c.T.Server.Model.TicketPool              : couldn't add 18 tickets. Pool is full.
+2024-11-24T01:19:00.817+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 8] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:00.818+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 10] c.T.Server.Model.TicketPool              : couldn't add 9 tickets. Pool is full.
+2024-11-24T01:19:00.833+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 4] c.T.Server.Model.TicketPool              : bought 5 tickets from the Ticket Pool
+Tickets in Pool: 25
+2024-11-24T01:19:00.833+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 12] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:00.833+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 13] c.T.Server.Model.TicketPool              : couldn't add 8 tickets. Pool is full.
+2024-11-24T01:19:00.833+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 14] c.T.Server.Model.TicketPool              : added 1 tickets to the Ticket Pool
+Tickets in Pool: 26
+2024-11-24T01:19:00.834+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 2] c.T.Server.Model.TicketPool              : bought 10 tickets from the Ticket Pool
+Tickets in Pool: 16
+2024-11-24T01:19:00.834+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 11] c.T.Server.Model.TicketPool              : added 11 tickets to the Ticket Pool
+Tickets in Pool: 27
+2024-11-24T01:19:00.834+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 5] c.T.Server.Model.TicketPool              : bought 2 tickets from the Ticket Pool
+Tickets in Pool: 25
+2024-11-24T01:19:00.834+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 1] c.T.Server.Model.TicketPool              : bought 2 tickets from the Ticket Pool
+Tickets in Pool: 23
+2024-11-24T01:19:00.834+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 3] c.T.Server.Model.TicketPool              : bought 3 tickets from the Ticket Pool
+Tickets in Pool: 20
+2024-11-24T01:19:00.835+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 6] c.T.Server.Model.TicketPool              : bought 18 tickets from the Ticket Pool
+Tickets in Pool: 2
+2024-11-24T01:19:00.835+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 15] c.T.Server.Model.TicketPool              : added 1 tickets to the Ticket Pool
+Tickets in Pool: 3
+2024-11-24T01:19:00.835+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 16] c.T.Server.Model.TicketPool              : added 6 tickets to the Ticket Pool
+Tickets in Pool: 9
+2024-11-24T01:19:00.835+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 7] c.T.Server.Model.TicketPool              : bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-24T01:19:00.841+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 11] c.T.Server.Model.TicketPool              : couldn't buy 9 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:00.841+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 12] c.T.Server.Model.TicketPool              : bought 7 tickets from the Ticket Pool
+Tickets in Pool: 1
+2024-11-24T01:19:00.841+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 9] c.T.Server.Model.TicketPool              : couldn't buy 7 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:00.841+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 8] c.T.Server.Model.TicketPool              : couldn't buy 5 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:00.841+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 10] c.T.Server.Model.TicketPool              : couldn't buy 4 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:00.843+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 13] c.T.Server.Model.TicketPool              : couldn't buy 18 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:01.811+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : added 17 tickets to the Ticket Pool
+Tickets in Pool: 18
+2024-11-24T01:19:01.813+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : added 4 tickets to the Ticket Pool
+Tickets in Pool: 22
+2024-11-24T01:19:01.813+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : added 2 tickets to the Ticket Pool
+Tickets in Pool: 24
+2024-11-24T01:19:01.818+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 5] c.T.Server.Model.TicketPool              : couldn't add 9 tickets. Pool is full.
+2024-11-24T01:19:01.818+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 9] c.T.Server.Model.TicketPool              : added 5 tickets to the Ticket Pool
+Tickets in Pool: 29
+2024-11-24T01:19:01.818+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 6] c.T.Server.Model.TicketPool              : couldn't add 6 tickets. Pool is full.
+2024-11-24T01:19:01.819+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 7] c.T.Server.Model.TicketPool              : couldn't add 18 tickets. Pool is full.
+2024-11-24T01:19:01.819+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 8] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:01.820+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 4] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:01.820+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 10] c.T.Server.Model.TicketPool              : couldn't add 9 tickets. Pool is full.
+2024-11-24T01:19:01.834+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 4] c.T.Server.Model.TicketPool              : bought 5 tickets from the Ticket Pool
+Tickets in Pool: 24
+2024-11-24T01:19:01.834+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 12] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:01.835+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 11] c.T.Server.Model.TicketPool              : couldn't add 11 tickets. Pool is full.
+2024-11-24T01:19:01.835+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 14] c.T.Server.Model.TicketPool              : added 1 tickets to the Ticket Pool
+Tickets in Pool: 25
+2024-11-24T01:19:01.835+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 2] c.T.Server.Model.TicketPool              : bought 10 tickets from the Ticket Pool
+Tickets in Pool: 15
+2024-11-24T01:19:01.835+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 5] c.T.Server.Model.TicketPool              : bought 2 tickets from the Ticket Pool
+Tickets in Pool: 13
+2024-11-24T01:19:01.835+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 1] c.T.Server.Model.TicketPool              : bought 2 tickets from the Ticket Pool
+Tickets in Pool: 11
+2024-11-24T01:19:01.836+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 13] c.T.Server.Model.TicketPool              : added 8 tickets to the Ticket Pool
+Tickets in Pool: 19
+2024-11-24T01:19:01.838+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 3] c.T.Server.Model.TicketPool              : bought 3 tickets from the Ticket Pool
+Tickets in Pool: 16
+2024-11-24T01:19:01.842+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 9] c.T.Server.Model.TicketPool              : bought 7 tickets from the Ticket Pool
+Tickets in Pool: 9
+2024-11-24T01:19:01.842+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 11] c.T.Server.Model.TicketPool              : bought 9 tickets from the Ticket Pool
+Tickets in Pool: 0
+2024-11-24T01:19:01.842+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 10] c.T.Server.Model.TicketPool              : couldn't buy 4 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:01.842+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 8] c.T.Server.Model.TicketPool              : couldn't buy 5 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:01.842+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 12] c.T.Server.Model.TicketPool              : couldn't buy 7 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:01.851+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 7] c.T.Server.Model.TicketPool              : couldn't buy 1 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:01.851+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 6] c.T.Server.Model.TicketPool              : couldn't buy 18 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:01.851+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 13] c.T.Server.Model.TicketPool              : couldn't buy 18 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:01.851+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 16] c.T.Server.Model.TicketPool              : added 6 tickets to the Ticket Pool
+Tickets in Pool: 6
+2024-11-24T01:19:01.851+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 15] c.T.Server.Model.TicketPool              : added 1 tickets to the Ticket Pool
+Tickets in Pool: 7
+2024-11-24T01:19:02.814+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : added 2 tickets to the Ticket Pool
+Tickets in Pool: 9
+2024-11-24T01:19:02.814+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : added 4 tickets to the Ticket Pool
+Tickets in Pool: 13
+2024-11-24T01:19:02.814+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : added 17 tickets to the Ticket Pool
+Tickets in Pool: 30
+2024-11-24T01:19:02.818+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 9] c.T.Server.Model.TicketPool              : couldn't add 5 tickets. Pool is full.
+2024-11-24T01:19:02.818+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 5] c.T.Server.Model.TicketPool              : couldn't add 9 tickets. Pool is full.
+2024-11-24T01:19:02.820+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 4] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:02.820+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 6] c.T.Server.Model.TicketPool              : couldn't add 6 tickets. Pool is full.
+2024-11-24T01:19:02.820+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 7] c.T.Server.Model.TicketPool              : couldn't add 18 tickets. Pool is full.
+2024-11-24T01:19:02.830+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 8] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:02.830+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 10] c.T.Server.Model.TicketPool              : couldn't add 9 tickets. Pool is full.
+2024-11-24T01:19:02.835+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 4] c.T.Server.Model.TicketPool              : bought 5 tickets from the Ticket Pool
+Tickets in Pool: 25
+2024-11-24T01:19:02.836+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 12] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:02.836+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 1] c.T.Server.Model.TicketPool              : bought 2 tickets from the Ticket Pool
+Tickets in Pool: 23
+2024-11-24T01:19:02.837+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 5] c.T.Server.Model.TicketPool              : bought 2 tickets from the Ticket Pool
+Tickets in Pool: 21
+2024-11-24T01:19:02.837+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 11] c.T.Server.Model.TicketPool              : couldn't add 11 tickets. Pool is full.
+2024-11-24T01:19:02.837+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 14] c.T.Server.Model.TicketPool              : added 1 tickets to the Ticket Pool
+Tickets in Pool: 22
+2024-11-24T01:19:02.837+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 2] c.T.Server.Model.TicketPool              : bought 10 tickets from the Ticket Pool
+Tickets in Pool: 12
+2024-11-24T01:19:02.838+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 13] c.T.Server.Model.TicketPool              : added 8 tickets to the Ticket Pool
+Tickets in Pool: 20
+2024-11-24T01:19:02.843+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 9] c.T.Server.Model.TicketPool              : bought 7 tickets from the Ticket Pool
+Tickets in Pool: 13
+2024-11-24T01:19:02.843+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 10] c.T.Server.Model.TicketPool              : bought 4 tickets from the Ticket Pool
+Tickets in Pool: 9
+2024-11-24T01:19:02.844+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 11] c.T.Server.Model.TicketPool              : bought 9 tickets from the Ticket Pool
+Tickets in Pool: 0
+2024-11-24T01:19:02.844+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 8] c.T.Server.Model.TicketPool              : couldn't buy 5 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:02.846+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 3] c.T.Server.Model.TicketPool              : couldn't buy 3 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:02.846+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 12] c.T.Server.Model.TicketPool              : couldn't buy 7 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:02.852+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 13] c.T.Server.Model.TicketPool              : couldn't buy 18 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:02.852+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 7] c.T.Server.Model.TicketPool              : couldn't buy 1 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:02.852+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 6] c.T.Server.Model.TicketPool              : couldn't buy 18 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:02.853+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 16] c.T.Server.Model.TicketPool              : added 6 tickets to the Ticket Pool
+Tickets in Pool: 6
+2024-11-24T01:19:02.861+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 15] c.T.Server.Model.TicketPool              : added 1 tickets to the Ticket Pool
+Tickets in Pool: 7
+2024-11-24T01:19:03.815+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : added 4 tickets to the Ticket Pool
+Tickets in Pool: 11
+2024-11-24T01:19:03.815+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : added 2 tickets to the Ticket Pool
+Tickets in Pool: 13
+2024-11-24T01:19:03.817+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : added 17 tickets to the Ticket Pool
+Tickets in Pool: 30
+2024-11-24T01:19:03.819+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 9] c.T.Server.Model.TicketPool              : couldn't add 5 tickets. Pool is full.
+2024-11-24T01:19:03.819+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 5] c.T.Server.Model.TicketPool              : couldn't add 9 tickets. Pool is full.
+2024-11-24T01:19:03.821+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 4] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:03.821+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 6] c.T.Server.Model.TicketPool              : couldn't add 6 tickets. Pool is full.
+2024-11-24T01:19:03.830+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 8] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:03.833+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 7] c.T.Server.Model.TicketPool              : couldn't add 18 tickets. Pool is full.
+2024-11-24T01:19:03.833+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 10] c.T.Server.Model.TicketPool              : couldn't add 9 tickets. Pool is full.
+2024-11-24T01:19:03.836+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 4] c.T.Server.Model.TicketPool              : bought 5 tickets from the Ticket Pool
+Tickets in Pool: 25
+2024-11-24T01:19:03.838+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 11] c.T.Server.Model.TicketPool              : couldn't add 11 tickets. Pool is full.
+2024-11-24T01:19:03.838+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 1] c.T.Server.Model.TicketPool              : bought 2 tickets from the Ticket Pool
+Tickets in Pool: 23
+2024-11-24T01:19:03.838+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 5] c.T.Server.Model.TicketPool              : bought 2 tickets from the Ticket Pool
+Tickets in Pool: 21
+2024-11-24T01:19:03.838+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 2] c.T.Server.Model.TicketPool              : bought 10 tickets from the Ticket Pool
+Tickets in Pool: 11
+2024-11-24T01:19:03.838+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 14] c.T.Server.Model.TicketPool              : added 1 tickets to the Ticket Pool
+Tickets in Pool: 12
+2024-11-24T01:19:03.838+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 12] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:03.844+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 10] c.T.Server.Model.TicketPool              : bought 4 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-24T01:19:03.844+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 9] c.T.Server.Model.TicketPool              : bought 7 tickets from the Ticket Pool
+Tickets in Pool: 1
+2024-11-24T01:19:03.845+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 11] c.T.Server.Model.TicketPool              : couldn't buy 9 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:03.847+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 3] c.T.Server.Model.TicketPool              : couldn't buy 3 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:03.849+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 12] c.T.Server.Model.TicketPool              : couldn't buy 7 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:03.849+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 8] c.T.Server.Model.TicketPool              : couldn't buy 5 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:03.849+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 13] c.T.Server.Model.TicketPool              : added 8 tickets to the Ticket Pool
+Tickets in Pool: 9
+2024-11-24T01:19:03.853+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 6] c.T.Server.Model.TicketPool              : couldn't buy 18 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:03.853+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 13] c.T.Server.Model.TicketPool              : couldn't buy 18 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:03.853+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 7] c.T.Server.Model.TicketPool              : bought 1 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-24T01:19:03.865+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 15] c.T.Server.Model.TicketPool              : added 1 tickets to the Ticket Pool
+Tickets in Pool: 9
+2024-11-24T01:19:03.865+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 16] c.T.Server.Model.TicketPool              : added 6 tickets to the Ticket Pool
+Tickets in Pool: 15
+2024-11-24T01:19:04.815+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : added 4 tickets to the Ticket Pool
+Tickets in Pool: 19
+2024-11-24T01:19:04.820+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 9] c.T.Server.Model.TicketPool              : added 5 tickets to the Ticket Pool
+Tickets in Pool: 24
+2024-11-24T01:19:04.821+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : couldn't add 17 tickets. Pool is full.
+2024-11-24T01:19:04.821+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : added 2 tickets to the Ticket Pool
+Tickets in Pool: 26
+2024-11-24T01:19:04.821+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 5] c.T.Server.Model.TicketPool              : couldn't add 9 tickets. Pool is full.
+2024-11-24T01:19:04.823+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 4] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:04.823+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 6] c.T.Server.Model.TicketPool              : couldn't add 6 tickets. Pool is full.
+2024-11-24T01:19:04.834+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 7] c.T.Server.Model.TicketPool              : couldn't add 18 tickets. Pool is full.
+2024-11-24T01:19:04.837+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 10] c.T.Server.Model.TicketPool              : couldn't add 9 tickets. Pool is full.
+2024-11-24T01:19:04.837+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 8] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:04.837+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 4] c.T.Server.Model.TicketPool              : bought 5 tickets from the Ticket Pool
+Tickets in Pool: 21
+2024-11-24T01:19:04.838+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 11] c.T.Server.Model.TicketPool              : couldn't add 11 tickets. Pool is full.
+2024-11-24T01:19:04.840+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 1] c.T.Server.Model.TicketPool              : bought 2 tickets from the Ticket Pool
+Tickets in Pool: 19
+2024-11-24T01:19:04.840+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 2] c.T.Server.Model.TicketPool              : bought 10 tickets from the Ticket Pool
+Tickets in Pool: 9
+2024-11-24T01:19:04.840+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 5] c.T.Server.Model.TicketPool              : bought 2 tickets from the Ticket Pool
+Tickets in Pool: 7
+2024-11-24T01:19:04.840+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 14] c.T.Server.Model.TicketPool              : added 1 tickets to the Ticket Pool
+Tickets in Pool: 8
+2024-11-24T01:19:04.844+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 10] c.T.Server.Model.TicketPool              : bought 4 tickets from the Ticket Pool
+Tickets in Pool: 4
+2024-11-24T01:19:04.844+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 9] c.T.Server.Model.TicketPool              : couldn't buy 7 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:04.849+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 8] c.T.Server.Model.TicketPool              : couldn't buy 5 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:04.849+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 12] c.T.Server.Model.TicketPool              : couldn't buy 7 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:04.853+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 12] c.T.Server.Model.TicketPool              : added 19 tickets to the Ticket Pool
+Tickets in Pool: 23
+2024-11-24T01:19:04.853+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 11] c.T.Server.Model.TicketPool              : bought 9 tickets from the Ticket Pool
+Tickets in Pool: 14
+2024-11-24T01:19:04.853+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 13] c.T.Server.Model.TicketPool              : added 8 tickets to the Ticket Pool
+Tickets in Pool: 22
+2024-11-24T01:19:04.853+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 3] c.T.Server.Model.TicketPool              : bought 3 tickets from the Ticket Pool
+Tickets in Pool: 19
+2024-11-24T01:19:04.854+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 13] c.T.Server.Model.TicketPool              : bought 18 tickets from the Ticket Pool
+Tickets in Pool: 1
+2024-11-24T01:19:04.854+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 6] c.T.Server.Model.TicketPool              : couldn't buy 18 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:04.866+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 15] c.T.Server.Model.TicketPool              : added 1 tickets to the Ticket Pool
+Tickets in Pool: 2
+2024-11-24T01:19:04.869+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 16] c.T.Server.Model.TicketPool              : added 6 tickets to the Ticket Pool
+Tickets in Pool: 8
+2024-11-24T01:19:04.869+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 7] c.T.Server.Model.TicketPool              : bought 1 tickets from the Ticket Pool
+Tickets in Pool: 7
+2024-11-24T01:19:05.816+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 3] c.T.Server.Model.TicketPool              : added 4 tickets to the Ticket Pool
+Tickets in Pool: 11
+2024-11-24T01:19:05.822+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 5] c.T.Server.Model.TicketPool              : added 9 tickets to the Ticket Pool
+Tickets in Pool: 20
+2024-11-24T01:19:05.822+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 2] c.T.Server.Model.TicketPool              : added 2 tickets to the Ticket Pool
+Tickets in Pool: 22
+2024-11-24T01:19:05.822+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 1] c.T.Server.Model.TicketPool              : couldn't add 17 tickets. Pool is full.
+2024-11-24T01:19:05.824+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 4] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:05.831+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 6] c.T.Server.Model.TicketPool              : added 6 tickets to the Ticket Pool
+Tickets in Pool: 28
+2024-11-24T01:19:05.831+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 9] c.T.Server.Model.TicketPool              : couldn't add 5 tickets. Pool is full.
+2024-11-24T01:19:05.838+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 10] c.T.Server.Model.TicketPool              : couldn't add 9 tickets. Pool is full.
+2024-11-24T01:19:05.840+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 4] c.T.Server.Model.TicketPool              : bought 5 tickets from the Ticket Pool
+Tickets in Pool: 23
+2024-11-24T01:19:05.840+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 8] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:05.840+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 11] c.T.Server.Model.TicketPool              : couldn't add 11 tickets. Pool is full.
+2024-11-24T01:19:05.841+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 1] c.T.Server.Model.TicketPool              : bought 2 tickets from the Ticket Pool
+Tickets in Pool: 21
+2024-11-24T01:19:05.842+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 2] c.T.Server.Model.TicketPool              : bought 10 tickets from the Ticket Pool
+Tickets in Pool: 11
+2024-11-24T01:19:05.842+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 5] c.T.Server.Model.TicketPool              : bought 2 tickets from the Ticket Pool
+Tickets in Pool: 9
+2024-11-24T01:19:05.847+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 10] c.T.Server.Model.TicketPool              : bought 4 tickets from the Ticket Pool
+Tickets in Pool: 5
+2024-11-24T01:19:05.847+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 14] c.T.Server.Model.TicketPool              : added 1 tickets to the Ticket Pool
+Tickets in Pool: 6
+2024-11-24T01:19:05.847+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 9] c.T.Server.Model.TicketPool              : couldn't buy 7 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:05.847+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 7] c.T.Server.Model.TicketPool              : added 18 tickets to the Ticket Pool
+Tickets in Pool: 24
+2024-11-24T01:19:05.850+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 8] c.T.Server.Model.TicketPool              : bought 5 tickets from the Ticket Pool
+Tickets in Pool: 19
+2024-11-24T01:19:05.853+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 12] c.T.Server.Model.TicketPool              : couldn't add 19 tickets. Pool is full.
+2024-11-24T01:19:05.853+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 11] c.T.Server.Model.TicketPool              : bought 9 tickets from the Ticket Pool
+Tickets in Pool: 10
+2024-11-24T01:19:05.855+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 13] c.T.Server.Model.TicketPool              : couldn't buy 18 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:05.855+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 13] c.T.Server.Model.TicketPool              : added 8 tickets to the Ticket Pool
+Tickets in Pool: 18
+2024-11-24T01:19:05.863+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 3] c.T.Server.Model.TicketPool              : bought 3 tickets from the Ticket Pool
+Tickets in Pool: 15
+2024-11-24T01:19:05.863+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 6] c.T.Server.Model.TicketPool              : couldn't buy 18 tickets. Not enough tickets in the pool.
+2024-11-24T01:19:05.863+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 12] c.T.Server.Model.TicketPool              : bought 7 tickets from the Ticket Pool
+Tickets in Pool: 8
+2024-11-24T01:19:05.869+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 16] c.T.Server.Model.TicketPool              : added 6 tickets to the Ticket Pool
+Tickets in Pool: 14
+2024-11-24T01:19:05.879+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Vendor 15] c.T.Server.Model.TicketPool              : added 1 tickets to the Ticket Pool
+Tickets in Pool: 15
+2024-11-24T01:19:05.879+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [Customer 7] c.T.Server.Model.TicketPool              : bought 1 tickets from the Ticket Pool
+Tickets in Pool: 14
+2024-11-24T01:19:10.114+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-24T01:19:10.745+05:30 %PARSER_ERROR[j] 2300 --- [TicketingSystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

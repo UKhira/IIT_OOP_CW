@@ -74,7 +74,7 @@ public class ThreadGenerator {
      * Reference: https://stackoverflow.com/questions/26586489/integer-parseintscanner-nextline-vs-scanner-nextint*/
     private int setVendorCount(){
         int count;
-        System.out.println("To Start Simulation Please Enter Vendor Count you want to add \nIf the value is invalid Customer count will be set as 5 to run the the simulation");
+        System.out.println("To Start Simulation Please Enter Vendor Count you want to add \nIf the value is invalid Vendor count will be set as 5 to run the the simulation");
         try{
             count = Integer.parseInt(addCount.nextLine());
         }
