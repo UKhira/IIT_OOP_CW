@@ -19,6 +19,10 @@ public class TicketingService {
         this.threadGenerator = threadGenerator;
     }
 
+    @RequestMapping("/home")
+    public static synchronized int getCurrentAmount(){
+        return TicketPool.getCurrentAmount();
+    }
 
     @PostMapping("/setTicket/{value}")
     public ResponseEntity<TicketPool> setMaxTicket(@PathVariable("value") int value){

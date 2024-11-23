@@ -1,37 +1,43 @@
 package com.TicketingSystem.Server.Repository;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
-@Component
-@Repository
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+import java.time.LocalDateTime;
+
+@Entity
 public class StatusTable {
 
-    @Autowired
-    private static JdbcTemplate jdbcTemplate;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private int current_amount;
+    private LocalDateTime time_stamp;
 
-    public void saveThreadActivity(String threadName, String role, int tickets) {
-        String sql = "INSERT INTO ticket_pool_activity (thread_name, act, tickets) VALUES (?, ?, ?)";
-        jdbcTemplate.update(sql, threadName, role, tickets);
+    public Long getId() {
+        return id;
     }
 
-    public void updateThreadActivity(String threadName, int tickets) {
-        String sql = "UPDATE thread_ticket_activity SET tickets = tickets + ? WHERE thread_name = ?";
-        jdbcTemplate.update(sql, tickets, threadName);
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public boolean threadExists(String threadName) {
-        String sql = "SELECT COUNT(*) FROM thread_ticket_activity WHERE thread_name = ?";
-        Integer count = jdbcTemplate.queryForObject(sql, Integer.class, threadName);
-        return count != null && count > 0;
+    public LocalDateTime getTime_stamp() {
+        return time_stamp;
     }
 
-    public static void updateTicketCount(int amount, String value){
-        System.out.println("Came to query");
-        String sql = "INSERT INTO ticketcount (current_amount,ticketname) VALUE (?,?)";
-        jdbcTemplate.update(sql,amount, value);
-        System.out.println("Exit the query");
+    public void setTime_stamp(LocalDateTime time_stamp) {
+        this.time_stamp = time_stamp;
+    }
+
+    public int getCurrent_amount() {
+        return this.current_amount;
+    }
+
+    public void setCurrent_amount(int current_amount) {
+        this.current_amount = current_amount;
     }
 }

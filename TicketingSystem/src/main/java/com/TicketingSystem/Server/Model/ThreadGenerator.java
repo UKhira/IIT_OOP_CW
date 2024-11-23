@@ -12,8 +12,6 @@ import java.util.Scanner;
 
 @Component
 public class ThreadGenerator {
-    @Autowired
-    StatusTable table;
 
 
     Scanner addCount = new Scanner(System.in);
