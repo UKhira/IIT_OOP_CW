@@ -179,7 +179,7 @@ public class CLI{
         }
     }
 
-    public void loadDataFromJson() {
+    public void loadDataFromJson(){
         try{
             String jsonFile = new String(Files.readAllBytes(Paths.get("Configuration.json")));
             JSONObject jsonObject = new JSONObject(jsonFile);
