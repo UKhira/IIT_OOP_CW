@@ -5,7 +5,7 @@ function Form(){
     return(
         <div class="container">
             <div class="brand-logo"></div>
-            <div class="brand-title">TicketEZ</div>
+            <div class="brand-title">🎟️ TicketEZ 🎫</div>
             <div class="inputs">
                 
                 <label>Release Rate</label>
@@ -15,7 +15,7 @@ function Form(){
                 <label>Max Amount</label>
                 <InputField prompt = "The Max Ticket Amount that Ticketpool can have"/>
 
-                <button type="submit">Start</button>
+                <button type="submit">Start ▶️</button>
 
             </div>
         </div>
