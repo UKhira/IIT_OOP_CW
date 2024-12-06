@@ -4,24 +4,9 @@ public class Client {
     private int releaseRate;
     private int retrievalRate;
     private int maxAmount;
-    private int vendors;
-    private int customers;
+    private int vendorCount;
+    private int customerCount;
 
-    public int getVendors() {
-        return vendors;
-    }
-
-    public void setVendors(int vendors) {
-        this.vendors = vendors;
-    }
-
-    public int getCustomers() {
-        return customers;
-    }
-
-    public void setCustomers(int customers) {
-        this.customers = customers;
-    }
 
     public Client(){}
 
@@ -48,4 +33,22 @@ public class Client {
     public void setMaxAmount(int maxAmount) {
         this.maxAmount = maxAmount;
     }
+
+    public int getVendorCount() {
+        return vendorCount;
+    }
+
+    public void setVendorCount(int vendors) {
+        this.vendorCount = vendors;
+    }
+
+    public int getCustomerCount() {
+        return customerCount;
+    }
+
+    public void setCustomerCount(int customers) {
+        this.customerCount = customers;
+    }
+
+
 }

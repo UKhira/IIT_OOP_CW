@@ -1,0 +1,8 @@
+table{
+    background-color: aliceblue;
+}
+
+tr{
+    justify-content: space-between;
+    margin: 100px 100px 100px 100px;
+}

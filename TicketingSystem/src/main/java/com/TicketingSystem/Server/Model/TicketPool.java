@@ -21,7 +21,7 @@ public class TicketPool {
     protected static final Logger logger = LogManager.getLogger();
 
     public static void setMaxCapacity(int amount){
-        System.out.println("Max Capacity added");
+        logger.info("Max Capacity added");
         maxCapacity = amount;
     }
 
@@ -41,7 +41,7 @@ public class TicketPool {
         if (currentAmount + amount <= maxCapacity) {
             currentAmount += amount;
             // saveCurrentAmount(amount);
-            logger.info("added {} tickets to the Ticket Pool\nTickets in Pool: {}", amount, getCurrentAmount());
+            logger.info("added {} tickets to the Ticket Pool.\nTickets in Pool: {}", amount, getCurrentAmount());
             return true; // Indicate success
         } else {
             logger.info("couldn't add {} tickets. Pool is full.", amount);
@@ -53,7 +53,7 @@ public class TicketPool {
         if (currentAmount - amount >= 0) {
             currentAmount -= amount;
             // saveCurrentAmount(amount);
-            logger.info("bought {} tickets from the Ticket Pool\nTickets in Pool: {}", amount, getCurrentAmount());
+            logger.info("bought {} tickets from the Ticket Pool.\nTickets in Pool: {}", amount, getCurrentAmount());
             return true; // Indicate success
         } else {
             logger.info("couldn't buy {} tickets. Not enough tickets in the pool.", amount);

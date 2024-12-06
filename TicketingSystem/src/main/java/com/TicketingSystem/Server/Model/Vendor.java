@@ -1,7 +1,5 @@
 package com.TicketingSystem.Server.Model;
 
-import jakarta.persistence.*;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -9,13 +7,11 @@ import java.util.Collections;
 import java.util.List;
 
 
-//@Entity(name = "Vendor_Info")
 public class Vendor implements Runnable{
     private final int ticketCount;
 
-    //    @Transient
     @Autowired
-    private TicketPool ticket;
+    TicketPool ticket;
 
     private String name;
 
