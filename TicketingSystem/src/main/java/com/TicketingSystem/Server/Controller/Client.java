@@ -1,4 +1,4 @@
-package com.TicketingSystem.Server.Model;
+package com.TicketingSystem.Server.Controller;
 
 public class Client {
     private int releaseRate;

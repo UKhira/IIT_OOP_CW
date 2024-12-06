@@ -1,6 +1,6 @@
 package com.TicketingSystem.Server.Service;
 
-import com.TicketingSystem.Server.Model.ThreadGenerator;
+import com.TicketingSystem.Server.Config.ThreadGenerator;
 import com.TicketingSystem.Server.Model.TicketPool;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

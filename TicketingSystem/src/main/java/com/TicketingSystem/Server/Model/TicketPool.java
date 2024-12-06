@@ -2,11 +2,12 @@ package com.TicketingSystem.Server.Model;
 
 import com.TicketingSystem.Server.Repository.StatusTable;
 import com.TicketingSystem.Server.Repository.TableRepo;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDateTime;
+
+import static com.TicketingSystem.Server.Config.Utility.*;
 
 public class TicketPool {
 
@@ -16,9 +17,8 @@ public class TicketPool {
     @Autowired
     TableRepo tableRepo;
 
-    StatusTable statusTable = new StatusTable();
-
-    protected static final Logger logger = LogManager.getLogger();
+    @Autowired
+    StatusTable statusTable;
 
     public static void setMaxCapacity(int amount){
         logger.info("Max Capacity added");
@@ -40,30 +40,32 @@ public class TicketPool {
     public synchronized boolean addTickets(int amount) {
         if (currentAmount + amount <= maxCapacity) {
             currentAmount += amount;
-            // saveCurrentAmount(amount);
-            logger.info("added {} tickets to the Ticket Pool.\nTickets in Pool: {}", amount, getCurrentAmount());
-            return true; // Indicate success
+            logger.info(ANSI_YELLOW + "added {} tickets to the Ticket Pool.\nTickets in Pool: {}", amount, getCurrentAmount());
+//            saveCurrentAmount(amount);
+            return true;
+
         } else {
-            logger.info("couldn't add {} tickets. Pool is full.", amount);
-            return false; // Indicate failure
+            logger.info(ANSI_PURPLE + "couldn't add {} tickets. Pool is full.", amount);
+            return false;
         }
     }
 
     public synchronized boolean removeTickets(int amount) {
         if (currentAmount - amount >= 0) {
             currentAmount -= amount;
-            // saveCurrentAmount(amount);
-            logger.info("bought {} tickets from the Ticket Pool.\nTickets in Pool: {}", amount, getCurrentAmount());
-            return true; // Indicate success
+            logger.info(ANSI_GREEN + "bought {} tickets from the Ticket Pool.\nTickets in Pool: {}", amount, getCurrentAmount());
+//            saveCurrentAmount(amount);
+            return true;
         } else {
-            logger.info("couldn't buy {} tickets. Not enough tickets in the pool.", amount);
-            return false; // Indicate failure
+            logger.info(ANSI_PURPLE + "couldn't buy {} tickets. Not enough tickets in the pool.", amount);
+            return false;
         }
     }
 
-    public StatusTable saveCurrentAmount(int currentAmount){
-        statusTable.setCurrent_amount(currentAmount);
-        statusTable.setTime_stamp(LocalDateTime.now());
-        return tableRepo.save(statusTable);
-    }
+//    @PostConstruct
+//    public synchronized void saveCurrentAmount(int currentAmount){
+//        statusTable.setCurrent_amount(currentAmount);
+//        statusTable.setTime_stamp(LocalDateTime.now());
+//        tableRepo.save(statusTable);
+//    }
 }

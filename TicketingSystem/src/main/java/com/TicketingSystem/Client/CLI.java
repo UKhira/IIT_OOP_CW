@@ -1,5 +1,7 @@
-package com.TicketingSystem.CLI;
+package com.TicketingSystem.Client;
 
+import com.TicketingSystem.Server.Config.SysConfig;
+import com.TicketingSystem.Server.Config.ThreadGenerator;
 import com.TicketingSystem.Server.Model.*;
 import com.google.gson.Gson;
 import org.json.JSONObject;
@@ -9,6 +11,8 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Scanner;
+
+import static com.TicketingSystem.Server.Config.Utility.*;
 
 @Component
 public class CLI{
@@ -38,7 +42,7 @@ public class CLI{
                 switch (primaryOption) {
                     case 1:
                         loadDataFromJson();
-                        System.out.println("There are " + TicketPool.getCurrentAmount() + " tickets currently available in system");
+                        System.out.println(ANSI_YELLOW + "There are " + TicketPool.getCurrentAmount() + " tickets currently available in system");
                         updateOptionMenu(1);
                         break;
                     case 2: setTicketReleaseRate();
@@ -52,11 +56,11 @@ public class CLI{
                         checkUpdate();
                         break;
                     default:
-                        System.out.println("Invalid Input");
+                        System.out.println(ANSI_RED + "Invalid Input");
                         break;
                 }
             } catch (Exception exception) {
-                System.out.println("Please enter the Option Number");
+                System.out.println(ANSI_RED + "Please enter the Option Number");
                 userInput.nextLine();           //If an invalid value contain in scanner it needed to be clear
             }
         }
@@ -68,14 +72,14 @@ public class CLI{
      */
     private static void showOptions(){
         for (int i = 0; i <= 10; i++){
-            System.out.print("*\t");
+            System.out.print(ANSI_BLUE + "*\t");
         }
         System.out.println();
         for (String option : optionArray) {
-            System.out.println(option);
+            System.out.println(ANSI_BLUE + option);
         }
         for (int i = 0; i <= 10; i++){
-            System.out.print("*\t");
+            System.out.print(ANSI_BLUE + "*\t");
         }
         System.out.println();
     }
@@ -95,13 +99,13 @@ public class CLI{
      * @since 1.0
      */
     private static void setMaxTickets(){
-        System.out.println("Enter the Max Ticket amount");
+        System.out.println(ANSI_RESET + "Enter the Max Ticket amount");
         if(userInput.hasNextInt()){
             TicketPool.setMaxCapacity(userInput.nextInt());
             updateOptionMenu(4);
         }
         else{
-            System.out.println("Please enter a Integer value");
+            System.out.println(ANSI_RED + "Please enter a Integer value");
         }
     }
 
@@ -110,13 +114,13 @@ public class CLI{
      * @since 1.0
      */
     private static void setTicketReleaseRate(){
-        System.out.println("Enter the Highest Limit Ticket Amount which a Vendor can add");
+        System.out.println(ANSI_RESET + "Enter the Highest Limit Ticket Amount which a Vendor can add");
         if(userInput.hasNextInt()) {
             updateOptionMenu(2);
             ticketRelease = userInput.nextInt();
         }
         else
-            System.out.println("Invalid input");
+            System.out.println(ANSI_RED + "Invalid input");
     }
 
     /**
@@ -124,13 +128,13 @@ public class CLI{
      * @since 1.0
      */
     private static void setCustomerRetrievalRate(){
-        System.out.println("Enter the Highest Limit Ticket Amount which a Customer can buy");
+        System.out.println(ANSI_RESET + "Enter the Highest Limit Ticket Amount which a Customer can buy");
         if(userInput.hasNextInt()) {
             updateOptionMenu(3);
             customerRetrieval = userInput.nextInt();
         }
         else
-            System.out.println("Invalid input");
+            System.out.println(ANSI_RED + "Invalid input");
     }
 
     /**
@@ -151,7 +155,7 @@ public class CLI{
             threadGenerator.startThreads(ticketRelease,customerRetrieval);
         }
         else {
-            System.out.println("Please setup all parameters before start the system");
+            System.out.println(ANSI_RED + "Please setup all parameters before start the system");
         }
     }
 
@@ -173,9 +177,10 @@ public class CLI{
             Writer writer = new FileWriter("Configuration.json");
             json.toJson(config, writer);
             writer.close();
+            logger.info(ANSI_YELLOW + "Configurations saved successfully");
         }
         catch (Exception e){
-            System.out.println("Failed to save configuration");
+            logger.warn(ANSI_RED + "Failed to save configuration");
         }
     }
 
@@ -187,7 +192,7 @@ public class CLI{
             TicketPool.setCurrentAmount(jsonObject.getInt("currentAmount"));
         }
         catch (Exception e) {
-            System.out.println("No Data");
+            System.out.println(ANSI_RED + "No Data");
             TicketPool.setCurrentAmount(0);
         }
     }

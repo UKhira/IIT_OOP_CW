@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static com.TicketingSystem.Server.Config.Utility.*;
+
 
 public class Vendor implements Runnable{
     private final int ticketCount;
@@ -13,15 +15,11 @@ public class Vendor implements Runnable{
     @Autowired
     TicketPool ticket;
 
-    private String name;
 
-
-    //    @Transient
     private static final List<Integer> vendTicketList = Collections.synchronizedList(new ArrayList<>());
     private static final List<String> vendNameList = Collections.synchronizedList(new ArrayList<>());
 
 
-    //    @Transient
     private static volatile boolean runflag = true;
 
 
@@ -49,8 +47,6 @@ public class Vendor implements Runnable{
                 vendNameList.add(Thread.currentThread().getName());
                 vendTicketList.add(ticketCount);
             }
-//            System.out.println(vendNameList);
-//            System.out.println(vendList);
 
             try {
                 Thread.sleep(1000); // Optional delay
@@ -59,7 +55,7 @@ public class Vendor implements Runnable{
                 break;
             }
         }
-        System.out.println("Vendor thread stopped.");
+        logger.info(ANSI_WHITE + "Vendor thread stopped.");
 
     }
 

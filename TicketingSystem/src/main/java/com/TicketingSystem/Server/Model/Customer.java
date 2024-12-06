@@ -6,14 +6,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static com.TicketingSystem.Server.Config.Utility.ANSI_WHITE;
+import static com.TicketingSystem.Server.Config.Utility.logger;
+
 public class Customer implements Runnable{
 
-    private long id;
-
-    private int ticketCount;
+    private final int ticketCount;
 
     @Autowired
-    private TicketPool ticket;
+    TicketPool ticket;
 
     private static List<Integer> custList = Collections.synchronizedList(new ArrayList<>());
     private static List<String> custNameList = Collections.synchronizedList(new ArrayList<>());
@@ -46,7 +47,7 @@ public class Customer implements Runnable{
                 break;
             }
         }
-        System.out.println("Customer thread stopped.");
+        logger.info(ANSI_WHITE + "Customer thread stopped.");
     }
 
     public static void stopThread() {

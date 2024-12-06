@@ -1,4 +1,4 @@
-package com.TicketingSystem.Server.Model;
+package com.TicketingSystem.Server.Config;
 
 import org.springframework.stereotype.Component;
 

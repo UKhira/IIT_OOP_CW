@@ -1,6 +1,6 @@
 package com.TicketingSystem.Server;
 
-import com.TicketingSystem.CLI.CLI;
+import com.TicketingSystem.Client.CLI;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;

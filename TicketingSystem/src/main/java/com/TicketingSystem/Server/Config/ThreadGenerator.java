@@ -1,12 +1,17 @@
-package com.TicketingSystem.Server.Model;
+package com.TicketingSystem.Server.Config;
 
-import com.TicketingSystem.CLI.CLI;
+import com.TicketingSystem.Client.CLI;
+import com.TicketingSystem.Server.Model.Customer;
+import com.TicketingSystem.Server.Model.TicketPool;
+import com.TicketingSystem.Server.Model.Vendor;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+
+import static com.TicketingSystem.Server.Config.Utility.*;
 
 @Component
 public class ThreadGenerator {
@@ -50,7 +55,6 @@ public class ThreadGenerator {
             for (int i = 1; i <= vendorCount; i++) {
                 Thread vendor = new Thread(new Vendor(ticketPool, randomNumber.nextInt(1, ticketRelease + 1)));
                 vendor.setName("Vendor " + i);
-//                System.out.println("Vendor " + i + "started");
                 threadList.add(vendor);
                 vendor.start();
             }
@@ -58,7 +62,6 @@ public class ThreadGenerator {
             for (int i = 1; i <= customerCount; i++) {
                 Thread customer = new Thread(new Customer(ticketPool, randomNumber.nextInt(1, customerRetrieval + 1)));
                 customer.setName("Customer " + i);
-//                System.out.println("Customer " + i + "started");
                 threadList.add(customer);
                 customer.start();
             }
@@ -74,11 +77,11 @@ public class ThreadGenerator {
                     threads.join();
                 }
             } catch (InterruptedException e) {
-                System.out.println("Error stopping threads.");
+                logger.warn(ANSI_RED + "Error stopping threads.");
             }
 
             CLI.saveConfiguration(TicketPool.getCurrentAmount());
-            System.out.println("Simulation stopped.");
+            logger.info(ANSI_GREEN + "Simulation stopped.");
         }
     }
 
