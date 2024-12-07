@@ -2,10 +2,8 @@ package com.TicketingSystem.Server.Model;
 
 import com.TicketingSystem.Server.Repository.StatusTable;
 import com.TicketingSystem.Server.Repository.TableRepo;
-import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.time.LocalDateTime;
 
 import static com.TicketingSystem.Server.Config.Utility.*;
 
@@ -19,6 +17,8 @@ public class TicketPool {
 
     @Autowired
     StatusTable statusTable;
+
+
 
     public static void setMaxCapacity(int amount){
         logger.info("Max Capacity added");
