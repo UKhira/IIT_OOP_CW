@@ -1,11 +1,17 @@
-import Label from './Label.jsx'
 import './App.css'
+import Form from './Form/Form.jsx'
+
 
 function App() {
   return (
-    <>
-      <Label />
-    </>
+    <div className='main-div'>
+      <div className="secondary-div-one">
+        <Form />
+      </div>
+      <div className="secondary-div-two">
+        <h1>Hello</h1>
+      </div>
+    </div>
   )
 }
 
