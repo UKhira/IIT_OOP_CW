@@ -1,11 +1,11 @@
 // import './App.css'
-import Form from './Form/Form'
+import Layout from './components/Layout'
 
 function App() {
 
   return (
     <div className='form'>
-      <Form/>
+      <Layout />
     </div>
   )
 }

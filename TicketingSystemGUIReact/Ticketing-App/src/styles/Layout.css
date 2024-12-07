@@ -1,0 +1,27 @@
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background: #f1f1f1;
+}
+
+.main-container .sub-container-left {
+    flex: 1;
+    background: #d1d1d1; /* Optional: for visual distinction */
+}
+
+.main-container .sub-container-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #e1e1e1; /* Optional: for visual distinction */
+}
+
+.main-container .sub-container-right .sub-container-right-up,
+.main-container .sub-container-right .sub-container-right-down {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import InputField from '../InputField/InputField.jsx';
-import './Form.css'
+import InputField from '../sub-components/InputField.jsx';
 import Status from '../Status/Status.jsx';
+import '../styles/Form.css';
 
 function Form(){
 
@@ -10,9 +10,6 @@ function Form(){
     const [maxAmount, setMaxAmount] = useState('');
     const [vendorCount, setVendorCount] = useState('');
     const [customerCount, setCustomerCount] = useState('');
-
-    const [showStatus, setShowStatus] = useState(false);
-
 
 
     function submitHandler(event){
@@ -29,17 +26,8 @@ function Form(){
         });    
     }
 
-    function dashboard(){
-        return(
-            <Status />
-        );
-    }
-
     return(
         <>
-        {showStatus ? (
-            <Status />
-        ) : (
             <form className="container">
                 <div className="brand-logo"></div>
                 <div className="brand-title">🎟️ TicketEZ 🎫</div>
@@ -53,7 +41,7 @@ function Form(){
                     <label>Max Amount</label>
                     <InputField prompt="The Max Ticket Amount that Ticketpool can have" onChange={(e) => setMaxAmount(e.target.value)} />
                     
-                    <button type="submit" onClick={submitHandler}>Start ▶️</button>
+                    <button type="submit" onClick={submitHandler} className='start-btn'>Start ▶️</button>
                     
                     <label>Vendors</label>
                     <InputField prompt="Vendor Count" onChange={(e) => setVendorCount(e.target.value)} />
@@ -62,7 +50,6 @@ function Form(){
                     <InputField prompt="Customer Count" onChange={(e) => setCustomerCount(e.target.value)} />
                 </div>
             </form>
-        )}
     </>
     );
 }
