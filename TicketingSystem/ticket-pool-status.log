@@ -10941,3 +10941,5 @@ Tickets in Pool: 10
 2024-12-08T00:42:10.415+05:30 %PARSER_ERROR[j] 20064 --- [TicketingSystem] [Vendor 12] c.TicketingSystem.Server.Config.Utility  : [37mVendor thread stopped.
 2024-12-08T00:42:10.436+05:30 %PARSER_ERROR[j] 20064 --- [TicketingSystem] [restartedMain] c.TicketingSystem.Server.Config.Utility  : [33mConfigurations saved successfully
 2024-12-08T00:42:10.436+05:30 %PARSER_ERROR[j] 20064 --- [TicketingSystem] [restartedMain] c.TicketingSystem.Server.Config.Utility  : [32mSimulation stopped.
+2024-12-08T00:53:59.944+05:30 %PARSER_ERROR[j] 20064 --- [TicketingSystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-08T00:54:01.764+05:30 %PARSER_ERROR[j] 20064 --- [TicketingSystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
